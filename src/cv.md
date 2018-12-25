@@ -4,7 +4,6 @@
 ## Software Engineer
 
 > [rspaulau@gmail.com](rspaulau@gmail.com)  
-> +375 (29) 125-46-00  
 > LinkedIn: http://linkedin.com/in/romapavlov/  
 > GitHub: http://github.com/romansp  
 > StackOverflow: https://stackoverflow.com/users/3121976/roman-pavlov
@@ -13,13 +12,13 @@
 
 ### Profile
 
-Passionate in performance software engineer with almost 5 years of experience in enterprise web solutions development. I'm mostly experienced in Microsoft's stack but always willing to do explore new solutions and tools.
+Passionate in performance software engineer with more than 5 years of experience in enterprise web solutions development. I'm mostly experienced in Microsoft's stack but always willing to do explore new solutions and tools.
 
 ------
 
 ### Skills
 
-C#, ASP.NET MVC, T-SQL, JavaScript, AngularJS, jQuery, CSS, HTML, Git / SVN / TFS
+C#, ASP.NET MVC Core, ASP.NET MVC, JavaScript, Vue.js, Angular.js, Angular, jQuery, CSS, HTML, Git / SVN / TFS
 
 ------
 
@@ -27,6 +26,11 @@ C#, ASP.NET MVC, T-SQL, JavaScript, AngularJS, jQuery, CSS, HTML, Git / SVN / TF
 
 *April 2016 &ndash; Currently*  
 **Senior Software Engineer/Team Lead** @ [EffectiveSoft](https://effectivesoft.com) 
+
+Project: **Service for sharing prototyping application projects**  
+Project overview: Cloud hosted service for easily sharing projects with others. Avaialable in cloud and on-premises.
+* Team size: 2-5
+* Technologies: ASP.NET Core, NHibernate, Vue.js, TypeScript 
 
 Project: **Exporting plugin for [Sketch](https://sketchapp.com)**  
 Project overview: Seemlesly integrating exporting plugin for [Sketch](https://sketchapp.com) application. It provides feature to perform export of created assets into one of the market-leading wireframing and rapid prototyping applications on both Mac and PC.   
@@ -119,7 +123,7 @@ Project overview: A web-based system for governmental education establishments, 
 
 ### Languages
 
-*English* &ndash; Intermediate  
+*English* &ndash; Fluent  
 *Russian* &ndash; Native  
 
 ------

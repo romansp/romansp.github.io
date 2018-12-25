@@ -1,17 +1,18 @@
 sudo: false
 language: node_js
 node_js:
-  - node
+  - "node"
 
+cache: yarn
 script:
-  - npm install
-  - npm run docs:build
+  - yarn install
+  - yarn docs:build
 
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_ACCESS_TOKEN
-  target-branch: gh-pages
+  target-branch: master
   local-dir: public
   on:
     branch: master

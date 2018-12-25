@@ -3,5 +3,6 @@ module.exports = {
   description: 'My name is Roman',
   themeConfig: {
     search: false
-  }
+  },
+  dest: "public"
 }

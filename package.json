@@ -1,20 +1,21 @@
 {
   "name": "cv",
-  "version": "1.0.0",
+  "private": true,
   "description": "",
-  "dependencies": {},
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-filenames": "^2.1.0",
-    "gulp-markdown": "^1.2.0",
-    "marked": "^0.3.5",
-    "phantom": "^2.1.11"
+  "version": "1.0.0",
+  "author": "Roman Pavlov <rspaulau@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/romansp/romansp.github.io/issues"
   },
-  "author": "Roman Pavlov",
+  "devDependencies": {
+    "vuepress": "^1.0.0-alpha.30"
+  },
   "license": "MIT",
   "scripts": {
     "watch": "gulp default",
     "compile": "gulp compile",
-    "pdf": "gulp pdf"
+    "pdf": "gulp pdf",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   }
 }

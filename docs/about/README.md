@@ -32,13 +32,9 @@ Vue.js, TypeScript, C#, ASP.NET Core, ASP.NET MVC, Angular.js, Angular, Git / SV
 *November 2019 &ndash; Currently*\
 **Senior Software Engineer** @ [Axure](https://axure.com)
 
-**Axure Cloud**\
-Available in cloud and on-premises hosted service for easily sharing projects with others.
+**Axure Cloud and Axure Cloud Desktop**\
+Available in cloud and on-premises hosted service for easily sharing projects with others. Standalone desktop application for Mac OS and Windows that provides seamless exporting for artboards and their assets from Sketch and Adobe XD applications.
 - Technologies: ASP.NET Core, NHibernate, Vue.js, TypeScript
-
-**Axure Cloud Desktop**\
-Standalone desktop application for Mac OS and Windows that provides seamless exporting for artboards and their assets from Sketch and Adobe XD.
-- Technologies: Electron, Vue.js, TypeScript
 
 ------
 

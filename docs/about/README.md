@@ -16,13 +16,28 @@ Passionate in performance software engineer with more than 5 years of experience
 
 ### Experienced with
 
-Vue.js, JavaScript, C#, ASP.NET MVC Core, ASP.NET MVC, Angular.js, Angular, jQuery, CSS, HTML, Git / SVN / TFS
+Vue.js, TypeScript, C#, ASP.NET Core, ASP.NET MVC, Angular.js, Angular, Git / SVN / TFS
 
 ------
 
 ### Work Experience
 
-*April 2016 &ndash; Currently*\
+*November 2019 &ndash; Currently*\
+**Senior Software Engineer** @ [Axure](https://axure.com)
+
+**Axure Cloud**\
+Available in cloud and on-premises hosted service for easily sharing projects with others.
+- Technologies: ASP.NET Core, NHibernate, Vue.js, TypeScript
+
+**Axure Cloud Desktop**\
+Standalone desktop application for Mac OS and Windows that provides seamless exporting for artboards and their assets from Sketch and Adobe XD.
+- Technologies: Electron, Vue.js, TypeScript
+
+------
+
+### Work Experience
+
+*April 2016 &ndash; November 2019*\
 **Senior Software Engineer/Team Lead** @ [EffectiveSoft](https://effectivesoft.com)
 
 **Sharing Service for Prototyping Application**\
@@ -33,13 +48,13 @@ Available in cloud and on-premises hosted service for easily sharing projects wi
 Written in TypeScript exporting plugin for [Sketch](https://sketchapp.com) application. Provides feature to perform export of created assets into one of the market-leading wireframing and rapid prototyping applications on both Mac and PC.
 
 **Trading Platform Application**\
-Complete solution to trading stocks, indices, commodities, etc using iOS and Android mobile application. Acted as team leader for backend services team. Established automated deployment pipeline, using Jenkins jobs, Powershell and publising to Azure Cloud Services.
+Complete solution to trading stocks, indices, commodities, etc using iOS and Android mobile application. Acted as team leader for backend services team. Established automated deployment pipeline, using Jenkins jobs, Powershell and publishing to Azure Cloud Services.
 - Technologies: Microsoft Azure Cloud Services, .NET Framework 4.6, ASP.NET Web API 2, Microsoft SQL Server, EntityFramework, Angular 4, TypeScript, XUnit, NLog, Git
 
 **Sales Forecast System**\
 Web application with ability to view, search, sort, filter, calculate, modify, and commit sales fo recast data. System is integrated with third party sources for transparent data synchronization. Application provides rich graphical dashboard for data analysis.
 - Greatly improved application performance in key business processes, that helped customer to increase productivity in sales department.
-- Established Azure deployement pipeline, that dramatically increased number of releases: from single release in 2-3 days to multiple releases per day.
+- Established Azure deployment pipeline, that dramatically increased number of releases: from single release in 2-3 days to multiple releases per day.
 - Technologies: Microsoft Azure, .NET Framework 4.5, ASP.NET MVC 5, Microsoft SQL Server, EntityFramework, AngularJS, TypeScript, Bootstrap, XUnit, NLog, T4, MiniProfiler, Git
 
 ------

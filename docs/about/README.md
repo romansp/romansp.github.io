@@ -20,6 +20,13 @@ Vue.js, TypeScript, C#, ASP.NET Core, ASP.NET MVC, Angular.js, Angular, Git / SV
 
 ------
 
+### Languages
+
+*English* &ndash; Fluent\
+*Russian* &ndash; Native
+
+------
+
 ### Work Experience
 
 *November 2019 &ndash; Currently*\
@@ -81,13 +88,6 @@ An internal web-based portal for employees of one of the leading commercial bank
 **Education Management System**\
 A web-based system for governmental education establishments, primarily schools, that enables them to easily store, process and analyze data about its students, employees, equipment and many more. The system provides rich reporting possibilities including creating custom report forms, along with flexible data querying service.
 - Technologies: .NET Framework 4, ASP.NET MVC 4, Microsoft SQL Server, Entity Framework, jQuery, Bootstrap, Elmah, IIS 7.5, Team Foundation Server
-
-------
-
-### Languages
-
-*English* &ndash; Fluent\
-*Russian* &ndash; Native
 
 ------
 

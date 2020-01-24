@@ -1,0 +1,42 @@
+@media print {
+  html {
+    font-size: 12px;
+  }
+
+  p {
+    line-height: 1.5 !important;
+    margin-bottom: 1rem;
+  }
+
+  header {
+    display: none;
+  }
+
+  h1 {
+    padding-top: 0.5rem !important;
+  }
+
+  h3 {
+    padding-top: 3rem !important;
+  }
+
+  .icon.outbound {
+    display: none;
+  }
+
+  .header-anchor {
+    display: none;
+  }
+
+  hr {
+    display: none;
+  }
+
+  a::after{
+    content: " (" attr(href) ") ";
+  }
+
+  .print-hidden {
+    display: none !important;
+  }
+}

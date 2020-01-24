@@ -12,9 +12,6 @@
   },
   "license": "MIT",
   "scripts": {
-    "watch": "gulp default",
-    "compile": "gulp compile",
-    "pdf": "gulp pdf",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   }

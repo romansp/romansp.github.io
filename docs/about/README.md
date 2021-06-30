@@ -1,3 +1,7 @@
+---
+sidebar: false
+---
+
 # Roman Pavlov
 ## Software Engineer
 

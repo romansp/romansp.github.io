@@ -1,7 +1,9 @@
 ---
 home: true
-navbar: false
-actionText: About Me →
-actionLink: /about/
+navbar: true
+actions:
+  - text: About Me →
+    link: /about/
+    type: primary
 ---
 

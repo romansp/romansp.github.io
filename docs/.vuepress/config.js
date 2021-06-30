@@ -4,5 +4,4 @@ module.exports = {
   themeConfig: {
     search: false
   },
-  dest: "public"
 }

@@ -8,7 +8,7 @@
     "url": "https://github.com/romansp/romansp.github.io/issues"
   },
   "devDependencies": {
-    "vuepress": "^2.0.0-beta.25"
+    "vuepress": "^2.0.0-beta.26"
   },
   "license": "MIT",
   "scripts": {

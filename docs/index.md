@@ -1,8 +1,10 @@
 ---
+nav: false
 sidebar: false
+title: About
 ---
 
-# Roman Pavlov
+# Raman Paulau
 ## Software Engineer
 
 - [Email](mailto:rspaulau@gmail.com)

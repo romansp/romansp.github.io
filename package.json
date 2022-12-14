@@ -1,18 +1,19 @@
 {
   "name": "cv",
   "private": true,
-  "description": "",
   "version": "1.0.0",
-  "author": "Roman Pavlov <rspaulau@gmail.com>",
+  "author": "Raman Paulau <rspaulau@gmail.com>",
   "bugs": {
     "url": "https://github.com/romansp/romansp.github.io/issues"
   },
-  "devDependencies": {
-    "vuepress": "^2.0.0-beta.49"
-  },
-  "license": "MIT",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
-  }
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.31",
+    "vue": "^3.2.45"
+  },
+  "license": "MIT"
 }

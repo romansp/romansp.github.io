@@ -12,8 +12,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "vitepress": "^1.0.0-alpha.32",
-    "vue": "^3.2.45"
+    "vitepress": "^1.0.0-alpha.32"
   },
   "license": "MIT"
 }

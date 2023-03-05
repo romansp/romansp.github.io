@@ -20,12 +20,12 @@ jobs:
             fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
-          cache: yarn
+          cache: 'pnpm'
 
-      - run: yarn install --frozen-lockfile
+      - run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: yarn docs:build
+        run: pnpm docs:build
 
       - name: Deploy
         if: ${{ env.DEPLOY_SITE == 'true' }}

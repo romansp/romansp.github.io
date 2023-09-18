@@ -12,7 +12,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "vitepress": "1.0.0-rc.13"
+    "vitepress": "1.0.0-rc.14"
   },
   "license": "MIT"
 }

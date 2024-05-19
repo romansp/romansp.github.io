@@ -1,7 +1,7 @@
 {
   "name": "nuxt-app",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -17,6 +17,8 @@
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.13"
+    "@antfu/eslint-config": "^2.18.1",
+    "@tailwindcss/typography": "^0.5.13",
+    "eslint": "^9.3.0"
   }
 }

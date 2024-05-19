@@ -1,18 +1,22 @@
 {
-  "name": "cv",
+  "name": "nuxt-app",
   "private": true,
-  "version": "1.0.0",
-  "author": "Raman Paulau <rspaulau@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/romansp/romansp.github.io/issues"
-  },
+  "type": "module",
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/content": "^2.12.1",
+    "@nuxtjs/tailwindcss": "^6.12.0",
+    "nuxt": "^3.11.2",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2"
   },
   "devDependencies": {
-    "vitepress": "1.1.4"
-  },
-  "license": "MIT"
+    "@tailwindcss/typography": "^0.5.13"
+  }
 }

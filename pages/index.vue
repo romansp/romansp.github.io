@@ -1,10 +1,9 @@
 <template>
   <main>
     <ContentDoc v-slot="{ doc }">
-      <article class="prose dark:prose-invert">
-        <h1>{{ doc.title }}</h1>
+      <div class="prose dark:prose-invert">
         <ContentRenderer :value="doc" />
-      </article>
+      </div>
     </ContentDoc>
   </main>
 </template>

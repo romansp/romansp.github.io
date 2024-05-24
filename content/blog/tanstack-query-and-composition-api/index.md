@@ -1,5 +1,5 @@
 ---
-title: 'TanStack Query in Vue.js and Composition API'
+title: 'TanStack Query and Vue.js Composition API'
 draft: true
 date: 2024-05-19T22:00:00.000Z
 ---
@@ -205,7 +205,7 @@ useQuery(computed(() => {
 }))
 ```
 
-> Currently [there's an open issue](https://github.com/TanStack/query/issues/7420) around TypeScript types when passing `computed` into `useQuery`. Pinning @tanstack/vue-query to v5.35.1 is a temporary workaround.
+> Currently [there's an open issue](https://github.com/TanStack/query/issues/7474) around TypeScript types when passing `computed` `queryOptions` into `useQuery`. Pinning @tanstack/vue-query to v5.35.1 is a temporary workaround.
 
 ### Putting it All Together
 

@@ -1,17 +1,29 @@
 <script setup lang="ts">
 import { format } from 'date-fns'
+
+const { page } = useContent()
+
+useSeoMeta({
+  twitterTitle() {
+    return page.value.title
+  },
+  twitterDescription() {
+    return page.value.description
+  },
+  twitterImage() {
+    return '/og-image.png'
+  },
+})
 </script>
 
 <template>
   <main>
-    <ContentDoc v-slot="{ doc }">
-      <article class="prose dark:prose-invert">
-        <h1>{{ doc.title }}</h1>
-        <p>
-          <time :datetime="doc.date">{{ format(doc.date, "PPP") }}</time>
-        </p>
-        <ContentRenderer :value="doc" />
-      </article>
-    </ContentDoc>
+    <article class="prose dark:prose-invert">
+      <h1>{{ page.title }}</h1>
+      <p>
+        <time :datetime="page.date">{{ format(page.date, "PPP") }}</time>
+      </p>
+      <ContentRenderer :value="page" />
+    </article>
   </main>
 </template>

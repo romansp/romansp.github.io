@@ -1,15 +1,12 @@
 <script setup lang="ts">
 import { format } from 'date-fns'
 
-const { page } = useContent()
+const route = useRoute()
+const { data } = await useAsyncData(route.fullPath, () => queryContent(route.fullPath).findOne())
 
 useSeoMeta({
-  twitterTitle() {
-    return page.value.title
-  },
-  twitterDescription() {
-    return page.value.description
-  },
+  twitterTitle: computed(() => data.value?.title),
+  twitterDescription: computed(() => data.value?.description),
   twitterImage() {
     return '/og-image.png'
   },
@@ -18,12 +15,14 @@ useSeoMeta({
 
 <template>
   <main>
-    <article class="prose dark:prose-invert">
-      <h1>{{ page.title }}</h1>
-      <p>
-        <time :datetime="page.date">{{ format(page.date, "PPP") }}</time>
-      </p>
-      <ContentRenderer :value="page" />
-    </article>
+    <ContentDoc v-slot="{ doc }">
+      <article class="prose dark:prose-invert">
+        <h1>{{ doc.title }}</h1>
+        <p>
+          <time :datetime="doc.date">{{ format(doc.date, "PPP") }}</time>
+        </p>
+        <ContentRenderer :value="doc" />
+      </article>
+    </ContentDoc>
   </main>
 </template>

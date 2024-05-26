@@ -7,8 +7,6 @@ const { data } = await useAsyncData(route.fullPath, () => queryContent(route.ful
 useSeoMeta({
   twitterTitle: computed(() => data.value?.title),
   twitterDescription: computed(() => data.value?.description),
-  twitterImage: 'https://paulau.dev/og-image.png',
-  twitterCard: 'summary_large_image',
 })
 </script>
 
@@ -18,7 +16,7 @@ useSeoMeta({
       <template #default="{ doc }">
         <article class="prose dark:prose-invert">
           <h1>{{ doc.title }}</h1>
-          <p>
+          <p class="opacity-70 text-xs -mt-6">
             <time :datetime="doc.date">{{ format(doc.date, "PPP") }}</time>
           </p>
           <ContentRenderer :value="doc" />

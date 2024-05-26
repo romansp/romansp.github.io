@@ -9,7 +9,7 @@ useHead({
 useSeoMeta({
   ogImage: '/og-image.png',
   twitterImage: 'https://paulau.dev/og-image.png',
-  twitterCard: 'summary_large_image',
+  twitterCard: 'summary',
 })
 </script>
 

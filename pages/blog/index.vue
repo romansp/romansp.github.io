@@ -10,11 +10,11 @@ import { format } from 'date-fns'
           v-for="article in list"
           :key="article._path"
         >
-          <NuxtLink :to="article._path" class="underline hover:no-underline">
-            <h2 class="text-xl">
+          <NuxtLink :to="article._path" class="group hover:no-underline">
+            <h2 class="text-xl underline group-hover:no-underline">
               {{ article.title }}
             </h2>
-            <time class="text-sm" :datetime="article.date">{{ format(article.date, "PPP") }}</time>
+            <time class="text-xs opacity-70" :datetime="article.date">{{ format(article.date, "PPP") }}</time>
           </NuxtLink>
         </li>
       </ul>

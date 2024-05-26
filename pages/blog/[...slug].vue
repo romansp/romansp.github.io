@@ -1,16 +1,5 @@
 <script setup lang="ts">
 import { format } from 'date-fns'
-
-const route = useRoute()
-const { data } = await useAsyncData(route.fullPath, () => queryContent(route.fullPath).findOne())
-
-useSeoMeta({
-  twitterTitle: computed(() => data.value?.title),
-  twitterDescription: computed(() => data.value?.description),
-  twitterImage() {
-    return '/og-image.png'
-  },
-})
 </script>
 
 <template>

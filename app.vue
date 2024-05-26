@@ -5,9 +5,16 @@ useHead({
   },
   link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
 })
+
+const route = useRoute()
+const { data } = await useAsyncData(route.fullPath, () => queryContent(route.fullPath).findOne())
+
 useSeoMeta({
   ogImage: '/og-image.png',
   twitterCard: 'summary_large_image',
+  twitterTitle: computed(() => data.value?.title),
+  twitterDescription: computed(() => data.value?.description),
+  twitterImage: 'https://paulau.dev/og-image.png',
 })
 </script>
 

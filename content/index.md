@@ -2,7 +2,7 @@
 
 Hi! My name is Raman.
 
-I'm software developer with focus in web applications written in JavaScript and C#. I absolutely love Vue.js, TypeScript, and passionate about performance.
+I'm software developer with focus in web applications written in JavaScript and C#. I absolutely love Vue.js, TypeScript, and passionate about performance. Sometimes I write [blog posts](/blog).
 
 Outside of programming, I enjoy going to concerts and seeing movies at my favorite theater.
 

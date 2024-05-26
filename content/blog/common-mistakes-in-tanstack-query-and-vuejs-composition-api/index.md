@@ -1,5 +1,5 @@
 ---
-title: 'Common mistakes in TanStack Query and Vue.js Composition API'
+title: 'Common Mistakes in TanStack Query and Vue.js Composition API'
 date: 2024-05-26
 ---
 

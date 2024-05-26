@@ -24,7 +24,7 @@ defineOgImageComponent('NuxtSeo')
           </ul>
           <ul class="flex ml-auto gap-2">
             <a href="https://github.com/romansp">GitHub</a>
-            <a href="https://twitter.com/rplvlv">Twitter</a>
+            <a href="https://twitter.com/rpvlv">Twitter</a>
           </ul>
         </div>
       </nav>

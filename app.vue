@@ -1,3 +1,14 @@
+<script setup lang="ts">
+useHead({
+  htmlAttrs: {
+    lang: 'en',
+  },
+})
+useSeoMeta({
+  ogImage: '/og-image.png',
+})
+</script>
+
 <template>
   <div class="antialiased text-gray-900 dark:bg-gray-900 dark:text-slate-300 min-h-screen">
     <header>

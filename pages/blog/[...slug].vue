@@ -8,6 +8,8 @@ useSeoMeta({
   twitterTitle: computed(() => data.value?.title),
   twitterDescription: computed(() => data.value?.description),
 })
+
+defineOgImageComponent('NuxtSeo')
 </script>
 
 <template>

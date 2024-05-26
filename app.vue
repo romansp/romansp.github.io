@@ -6,11 +6,7 @@ useHead({
   link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
 })
 
-useSeoMeta({
-  ogImage: '/og-image.png',
-  twitterImage: 'https://paulau.dev/og-image.png',
-  twitterCard: 'summary',
-})
+defineOgImageComponent('NuxtSeo')
 </script>
 
 <template>

@@ -15,16 +15,24 @@ defineOgImageComponent('NuxtSeo')
       <nav class="p-8 flex flex-col px-4 py-6">
         <div class="flex gap-4">
           <ul class="flex gap-2">
-            <NuxtLink to="/">
-              Home
-            </NuxtLink>
-            <NuxtLink to="/blog">
-              Blog
-            </NuxtLink>
+            <li>
+              <NuxtLink to="/">
+                Home
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/blog">
+                Blog
+              </NuxtLink>
+            </li>
           </ul>
           <ul class="flex ml-auto gap-2">
-            <a href="https://github.com/romansp">GitHub</a>
-            <a href="https://twitter.com/rpvlv">Twitter</a>
+            <li>
+              <a href="https://github.com/romansp">GitHub</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/rpvlv">Twitter</a>
+            </li>
           </ul>
         </div>
       </nav>

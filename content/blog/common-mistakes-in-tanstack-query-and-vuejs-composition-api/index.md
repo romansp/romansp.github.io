@@ -5,13 +5,11 @@ date: 2024-05-26
 
 Let's talk about some common mistakes when using TanStack Query together with Vue.js Composition API.
 
-These mistakes usually come from those who are just starting using TanStack Query, Vue.js Composition API and `<script setup>`. It also happens to more mature developers migrating their applications from Vue 2 to Vue 3.
+While these mistakes often come from those who just started working with TanStack Query, Vue.js Composition API and `<script setup>` or from more mature developers migrating their applications from Vue 2 to Vue 3.
 
-Most of the time it comes down to the problem called "reactivity loss" and usually can be fixed with just few lines of code. However understanding why reactivity is lost and how to retain reactivity isn't entirely obvious.
+Most of the time it comes down to **reactivity loss** and usually can be fixed with just a few lines of code. However understanding why reactivity can be lost and how to retain it properly isn't entirely obvious.
 
-From my own experience seeing these mistakes happen so frequently probably indicates a certain gap in knowledge how to better utilize TanStack Query together with Vue.js Composition API.
-
-Let's take a look at few examples, understand how and why reactivity can be lost and learn how to avoid it.
+Let's take a look at few examples, understand _why_ reactivity can be lost, and explore how to avoid making this mistake.
 
 ## Losing `defineProps` Reactivity
 

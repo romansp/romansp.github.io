@@ -17,22 +17,22 @@ defineOgImageComponent('NuxtSeo')
         <div class="flex gap-4">
           <ul class="flex gap-2">
             <li>
-              <NuxtLink to="/">
+              <NuxtLink class="underline" to="/">
                 Home
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/blog">
+              <NuxtLink class="underline" to="/blog">
                 Blog
               </NuxtLink>
             </li>
           </ul>
           <ul class="flex ml-auto gap-2">
             <li>
-              <a href="https://github.com/romansp">GitHub</a>
+              <a class="underline" href="https://github.com/romansp">GitHub</a>
             </li>
             <li>
-              <a href="https://twitter.com/rpvlv">Twitter</a>
+              <a class="underline" href="https://twitter.com/rpvlv">Twitter</a>
             </li>
           </ul>
         </div>

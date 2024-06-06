@@ -7,7 +7,7 @@
           <p>
             Page Not Found
           </p>
-          <NuxtLink to="/">
+          <NuxtLink class="underline" to="/">
             Home
           </NuxtLink>
         </div>

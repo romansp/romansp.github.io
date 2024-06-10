@@ -24,7 +24,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^2.20.0",
     "@tailwindcss/typography": "^0.5.13",
-    "@tanstack/vue-query": "5.40.1",
+    "@tanstack/vue-query": "5.41.0",
     "eslint": "^8.57.0"
   }
 }

@@ -15,8 +15,8 @@ importers:
         specifier: ^1.7.0
         version: 1.7.0(ioredis@5.4.1)(rollup@4.18.0)
       '@nuxtjs/mdc':
-        specifier: 0.8.1
-        version: 0.8.1(rollup@4.18.0)
+        specifier: 0.8.2
+        version: 0.8.2(rollup@4.18.0)
       '@nuxtjs/tailwindcss':
         specifier: ^6.12.0
         version: 6.12.0(rollup@4.18.0)
@@ -957,8 +957,8 @@ packages:
   '@nuxtjs/mdc@0.6.1':
     resolution: {integrity: sha512-zS5QK7DZ/SBrjqQX1DOy7GnxKy+wbj2+LvooefOWmQqHfLTAqJLVIjuv/BmKnQWiRCq19+uysys3iY42EoY5/A==}
 
-  '@nuxtjs/mdc@0.8.1':
-    resolution: {integrity: sha512-/NIYkiw73gUm1SEfAjKXw5GYoS98WJEjvz+6XU5nyCKoWUcyY/vDS1iGIJXNvpEmPHVH/lnPFZnDerS3NfJIcQ==}
+  '@nuxtjs/mdc@0.8.2':
+    resolution: {integrity: sha512-Cle6P65jWolHOAGqILHCIlCrt7t9T4HD60Ao6BqKEXTTdAbp/oLjfW9vtv0KbJBG8F3+euVAFAd8SIIpJgb3wQ==}
 
   '@nuxtjs/tailwindcss@6.12.0':
     resolution: {integrity: sha512-vXvEq8z177TQcx0tc10mw3O6T9WeN0iTL8hIKGDfidmr+HKReexJU01aPgHefFrCu4LJB70egYFYnywzB9lMyQ==}
@@ -7296,7 +7296,7 @@ snapshots:
       '@shikijs/transformers': 1.6.4
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
-      '@vue/compiler-core': 3.4.27
+      '@vue/compiler-core': 3.4.28
       consola: 3.2.3
       debug: 4.3.5
       defu: 6.1.4
@@ -7331,13 +7331,13 @@ snapshots:
       - rollup
       - supports-color
 
-  '@nuxtjs/mdc@0.8.1(rollup@4.18.0)':
+  '@nuxtjs/mdc@0.8.2(rollup@4.18.0)':
     dependencies:
       '@nuxt/kit': 3.12.1(rollup@4.18.0)
       '@shikijs/transformers': 1.6.4
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
-      '@vue/compiler-core': 3.4.27
+      '@vue/compiler-core': 3.4.28
       consola: 3.2.3
       debug: 4.3.5
       defu: 6.1.4

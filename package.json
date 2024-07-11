@@ -14,7 +14,7 @@
     "@nuxt/content": "^2.13.1",
     "@nuxt/image": "^1.7.0",
     "@nuxtjs/mdc": "0.8.3",
-    "@nuxtjs/tailwindcss": "^6.12.0",
+    "@nuxtjs/tailwindcss": "^6.12.1",
     "date-fns": "^3.6.0",
     "nuxt-og-image": "3.0.0-rc.56",
     "vue": "^3.4.31",

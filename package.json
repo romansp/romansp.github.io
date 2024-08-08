@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.24.1",
-    "@tailwindcss/typography": "^0.5.13",
+    "@tailwindcss/typography": "^0.5.14",
     "eslint": "^8.57.0",
     "nuxt": "3.12.4"
   }

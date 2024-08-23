@@ -24,6 +24,6 @@
     "@antfu/eslint-config": "^2.27.1",
     "@tailwindcss/typography": "^0.5.14",
     "eslint": "^8.57.0",
-    "nuxt": "3.12.4"
+    "nuxt": "3.13.0"
   }
 }

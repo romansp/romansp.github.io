@@ -12,8 +12,8 @@ importers:
         specifier: ^2.13.2
         version: 2.13.2(ioredis@5.4.1)(magicast@0.3.4)(nuxt@3.13.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(encoding@0.1.13)(eslint@9.9.1(jiti@1.21.6))(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.0)(sass@1.77.4)(terser@5.31.1)(typescript@5.4.5)(vite@5.4.2(@types/node@20.14.2)(sass@1.77.4)(terser@5.31.1)))(rollup@4.18.0)(vue@3.4.38(typescript@5.4.5))
       '@nuxt/image':
-        specifier: ^1.7.1
-        version: 1.7.1(ioredis@5.4.1)(magicast@0.3.4)(rollup@4.18.0)
+        specifier: ^1.8.0
+        version: 1.8.0(ioredis@5.4.1)(magicast@0.3.4)(rollup@4.18.0)
       '@nuxtjs/mdc':
         specifier: 0.8.3
         version: 0.8.3(magicast@0.3.4)(rollup@4.18.0)
@@ -947,8 +947,8 @@ packages:
     peerDependencies:
       vite: '*'
 
-  '@nuxt/image@1.7.1':
-    resolution: {integrity: sha512-vD3p9CmFO718sbBZCaizOvk3Uw/M9eE5cotWD9rlGoMOf3bUYnXuxP4mEwa/qgupoZ+X5MnasZoWbrj8y9nfKg==}
+  '@nuxt/image@1.8.0':
+    resolution: {integrity: sha512-GBbORch+ZfWJ0KB8PaXABsPjaiEXB4B4plcpAUVNCdzKZi2qQ4beRnEXfAbtAWPUPefj3rgCG7b9AqAe51Qlzw==}
     engines: {node: ^14.16.0 || >=16.11.0}
 
   '@nuxt/kit@3.12.2':
@@ -6992,7 +6992,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@nuxt/image@1.7.1(ioredis@5.4.1)(magicast@0.3.4)(rollup@4.18.0)':
+  '@nuxt/image@1.8.0(ioredis@5.4.1)(magicast@0.3.4)(rollup@4.18.0)':
     dependencies:
       '@nuxt/kit': 3.13.0(magicast@0.3.4)(rollup@4.18.0)
       consola: 3.2.3

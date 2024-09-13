@@ -24,8 +24,8 @@ importers:
         specifier: ^3.6.0
         version: 3.6.0
       nuxt-og-image:
-        specifier: 3.0.1
-        version: 3.0.1(magicast@0.3.4)(rollup@4.21.0)(vite@5.4.3(@types/node@20.14.2)(sass@1.77.4)(terser@5.31.1))(vue@3.5.4(typescript@5.4.5))(webpack-sources@3.2.3)
+        specifier: 3.0.2
+        version: 3.0.2(magicast@0.3.4)(rollup@4.21.0)(vite@5.4.3(@types/node@20.14.2)(sass@1.77.4)(terser@5.31.1))(vue@3.5.4(typescript@5.4.5))(webpack-sources@3.2.3)
       vue:
         specifier: ^3.5.4
         version: 3.5.4(typescript@5.4.5)
@@ -3928,8 +3928,8 @@ packages:
     engines: {node: ^16.10.0 || >=18.0.0}
     hasBin: true
 
-  nuxt-og-image@3.0.1:
-    resolution: {integrity: sha512-UXm/+CDUpfbpGZFoLMTSYJ4w9I0P0g2ToTEexPnbu2wii6q6RaGYn7wL9KHwd0FTRPa3zDqZ4MmGicAWxVY45w==}
+  nuxt-og-image@3.0.2:
+    resolution: {integrity: sha512-R5JCiVxZwgFUS4JS1M9lAD3QWc9P9CSJj7qupiKxJfBKnRBSpNs9ci5hTbZbrh2FMf1si5qIJZT1VI8cdj9cHA==}
     engines: {node: '>=18.0.0'}
 
   nuxt-site-config-kit@2.2.17:
@@ -10305,7 +10305,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  nuxt-og-image@3.0.1(magicast@0.3.4)(rollup@4.21.0)(vite@5.4.3(@types/node@20.14.2)(sass@1.77.4)(terser@5.31.1))(vue@3.5.4(typescript@5.4.5))(webpack-sources@3.2.3):
+  nuxt-og-image@3.0.2(magicast@0.3.4)(rollup@4.21.0)(vite@5.4.3(@types/node@20.14.2)(sass@1.77.4)(terser@5.31.1))(vue@3.5.4(typescript@5.4.5))(webpack-sources@3.2.3):
     dependencies:
       '@nuxt/devtools-kit': 1.4.2(magicast@0.3.4)(rollup@4.21.0)(vite@5.4.3(@types/node@20.14.2)(sass@1.77.4)(terser@5.31.1))(webpack-sources@3.2.3)
       '@nuxt/kit': 3.13.1(magicast@0.3.4)(rollup@4.21.0)(webpack-sources@3.2.3)

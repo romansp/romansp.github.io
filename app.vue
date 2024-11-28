@@ -32,6 +32,9 @@ defineOgImageComponent('NuxtSeo')
               <a class="underline" href="https://github.com/romansp">GitHub</a>
             </li>
             <li>
+              <a class="underline" href="https://bsky.app/profile/paulau.dev">Bluesky</a>
+            </li>
+            <li>
               <a class="underline" href="https://twitter.com/rpvlv">Twitter</a>
             </li>
           </ul>

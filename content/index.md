@@ -6,4 +6,4 @@ I'm software developer with focus in web applications written in JavaScript and 
 
 Outside of programming, I enjoy going to concerts and seeing movies at my favorite theater.
 
-You can find my open source work on [GitHub](https://github.com/romansp). And you can also follow me on [Twitter](https://twitter.com/rpvlv).
+You can find my open source work on [GitHub](https://github.com/romansp). And you can also follow me on [Bluesky](https://bsky.app/profile/paulau.dev) or [Twitter](https://twitter.com/rpvlv).

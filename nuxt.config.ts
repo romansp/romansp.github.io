@@ -3,16 +3,18 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    "@nuxt/content",
-    "@nuxtjs/tailwindcss",
-    "@nuxtjs/mdc",
-    "@nuxt/image",
-    "nuxt-og-image"
+    '@nuxt/content',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/mdc',
+    '@nuxt/image',
+    'nuxt-og-image',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
   ],
 
   site: {
     url: 'https://paulau.dev',
-    name: "paulau.dev",
+    name: 'paulau.dev',
   },
 
   content: {
@@ -22,8 +24,8 @@ export default defineNuxtConfig({
         dark: 'github-dark-dimmed',
         light: 'github-light',
       },
-    }
+    },
   },
 
-  compatibilityDate: "2024-11-28"
+  compatibilityDate: '2024-11-28',
 })

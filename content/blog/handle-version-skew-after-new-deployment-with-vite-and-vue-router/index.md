@@ -1,7 +1,6 @@
 ---
 title: 'Handle version skew after new deployment with Vite and Vue Router'
-date: 2024-11-28
-draft: true
+date: 2024-12-01
 ---
 
 I'd like to share this simple solution I found on how to handle frontend client version skew after new Vue app deployment. I found it when exploring Nuxt's codebase. Original Nuxt's solution [can be found here](https://github.com/nuxt/nuxt/blob/2ea738854e3428f2cb03036630e6415b077fe732/packages/nuxt/src/app/plugins/chunk-reload.client.ts). Props to Nuxt team!
@@ -135,4 +134,6 @@ useChunkPreloadErrorHandling()
 
 So now when chunk load error happens it will be properly captured, target route's path will be constructed and app will perform full reload at the correct URL. To the client this looks like a normal page navigation.
 
-I find this solution quite powerful and elegant, without getting into more advanced techniques of bundle invalidation like PWA's service workers. And it could also be easily extended: for example, if you need to preserve app's current state you can do it in-place and just before triggering page reload.
+I find this solution quite powerful and very elegant. Without getting into tricky and advanced techniques of bundle invalidation, e.g. PWA's service workers or using dedicated CDN to store previous bundle versions.
+
+And it could also be easily extended. For example if you need to preserve app's current state you can do it in-place just before triggering page reload.

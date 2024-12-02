@@ -1,11 +1,14 @@
-<script setup>
+<script setup lang="ts">
+import type { QueryBuilderParams } from '@nuxt/content';
 import { format } from 'date-fns'
+
+const query: QueryBuilderParams = { path: 'blog', sort: [{ date: -1 }] }
 </script>
 
 <template>
   <main>
-    <ContentList v-slot="{ list }" path="blog">
-      <ul>
+    <ContentList v-slot="{ list }" :query="query">
+      <ul class="space-y-4">
         <li
           v-for="article in list"
           :key="article._path"

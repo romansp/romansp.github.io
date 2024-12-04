@@ -155,13 +155,13 @@ And we're back to the same problem we saw before. This time it's reactivity loss
 
 ### Retaining Reactivity Across Function Boundaries
 
-To retain prop reactivity across function boundary you can again use `toRef` function with a prop getter.
+To retain prop reactivity across function boundary you can again use `toRef` function with a prop getter. You can also pass getter function directly.
 
 ```ts
 import { toRef } from 'vue'
 
-// wrap into toRef to retain props reactivity across function boundary
-const todo = useTodo(toRef(() => props.id))
+// use getter to retain props reactivity across function boundary
+const todo = useTodo(() => props.id)
 ```
 
 Let's also adjust `useTodo` composable to support reactive values.
@@ -236,8 +236,6 @@ useQuery(computed(() => {
   })
 }))
 ```
-
-> Currently [there's an open issue](https://github.com/TanStack/query/issues/7474) around TypeScript types when passing `computed` `queryOptions` into `useQuery`. Pinning @tanstack/vue-query to v5.35.1 is a temporary workaround.
 
 ### Putting it All Together
 

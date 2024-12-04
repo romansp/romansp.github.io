@@ -42,7 +42,7 @@ window.addEventListener('vite:preloadError', (event) => {
 })
 ```
 
-Original PR for adding `vite:preloadError` from Daniel Roe can be found here https://github.com/vitejs/vite/pull/12084. Thanks Daniel 🎉!
+Pull request for adding `vite:preloadError` from Daniel Roe in Vite repository [#12084](https://github.com/vitejs/vite/pull/12084). Thanks Daniel 🎉!
 
 ## Combining chunk preload error with Vue Router
 

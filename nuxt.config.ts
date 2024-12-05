@@ -17,6 +17,14 @@ export default defineNuxtConfig({
     name: 'paulau.dev',
   },
 
+  experimental: {
+    defaults: {
+      nuxtLink: {
+        trailingSlash: 'append',
+      },
+    },
+  },
+
   content: {
     highlight: {
       theme: {

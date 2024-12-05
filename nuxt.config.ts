@@ -17,6 +17,12 @@ export default defineNuxtConfig({
     name: 'paulau.dev',
   },
 
+  router: {
+    options: {
+      strict: true,
+    },
+  },
+
   experimental: {
     defaults: {
       nuxtLink: {

@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.9.1",
-    "@nuxtjs/robots": "5.0.0",
+    "@nuxtjs/robots": "5.0.1",
     "@nuxtjs/sitemap": "7.0.0",
     "@tailwindcss/typography": "^0.5.15",
     "eslint": "^9.16.0",

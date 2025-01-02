@@ -87,9 +87,9 @@ Now this is ready:
 
 Even though this works quite well we'd like to avoid querying the server on each typed character. Ideally we'd like to somehow _delay_ or _debounce_ `queryFn` execution until user has finished typing.
 
-Naive and brute-force solution would be to attempt to wrap `queryFn` or `search` functions into something like lodash's `debounce`. Such implementation quite often lead to subtle bugs. And even though it _might_ eventually work I find these kind of solutions quite messy and convoluted. Need to point out that there's nothing wrong with debouncing functions in general. It's combining debounced functions together with TanStack Query is where it becomes odd.
+Naive and brute-force solution would be to attempt to wrap `queryFn` or `search` functions into something like lodash's `debounce`. Such implementation quite often leads to subtle bugs. And even though it _might_ work eventually I find this kind solution quite messy and convoluted. Of course there's nothing wrong with debouncing functions in general. But combining debounced functions together with TanStack Query is where it becomes somewhat odd.
 
-So instead of debouncing `queryFn` we're going to debounce the value of `queryFn`. It does sound strange so let me show you can achieve this with VueUse.
+In our case instead of debouncing `queryFn` we're going to debounce the value of `queryFn`. It does sound strange so let me show you can achieve this with VueUse.
 
 ```vue
 <script setup lang="ts">

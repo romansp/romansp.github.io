@@ -6,6 +6,8 @@ description: Efficient implementation of debounced Query in Vue
 
 Today I would like to share really neat and efficient solution how to create debounced search component in Vue.js with TanStack Query and a little help from VueUse library. Let's start from scratch with a very basic implementation and keep on adding features.
 
+## Basic implementation with TanStack Query
+
 We'll begin with a `searchTerm` to store typed in text. Let's bind it to `<input>` with the help of `v-model` directive. Of course we'll use `ref` primitive from Vue.js to keep it reactive.
 
 ```vue
@@ -60,6 +62,8 @@ useQuery({
 
 To better understand reactivity loss issues check out [my previous blog post](/blog/common-mistakes-in-tanstack-query-and-vuejs-composition-api). There I covered some common mistakes when dealing with TanStack Query and Vue.js reactivity.
 
+## Disable query for empty search
+
 Let's keep moving. After running our implementation you may notice that query executes with empty query value as soon as component mounts. This is because for Query it's perfectly valid and it automatically runs `queryFn` on mount. Let's fix this by providing `enabled` flag. Also notice we use `computed` to keep reactivity and cast `searchTerm` to boolean.
 
 ```ts
@@ -79,15 +83,16 @@ Now this is ready:
 1. TanStack Query uses returned value from `queryFn` to update `data`.
 1. `data` change causes template to re-render.
 
-Even though this works quite well we'd like to avoid querying the server per each character update. Ideally we'd like to somehow _delay_ or _debounce_ `queryFn` execution until user has finished typing.
+## Delay data-fetching by debouncing `queryKey` value
 
-Naive and most likely incorrect solution would be to attempt to wrap `queryFn` or `search` function into lodash's `debounce`. Even though it _might_ work I find this solution quite messy and convoluted.
+Even though this works quite well we'd like to avoid querying the server on each typed character. Ideally we'd like to somehow _delay_ or _debounce_ `queryFn` execution until user has finished typing.
 
-Let me show you a better way to solve this.
+Naive and brute-force solution would be to attempt to wrap `queryFn` or `search` functions into something like lodash's `debounce`. Such implementation quite often lead to subtle bugs. And even though it _might_ eventually work I find these kind of solutions quite messy and convoluted. Need to point out that there's nothing wrong with debouncing functions in general. It's combining debounced functions together with TanStack Query is where it becomes odd.
+
+So instead of debouncing `queryFn` we're going to debounce the value of `queryFn`. It does sound strange so let me show you can achieve this with VueUse.
 
 ```vue
 <script setup lang="ts">
-// use refDebounced from VueUse
 import { refDebounced } from "@vueuse/core";
 
 const searchTerm = ref("");
@@ -104,7 +109,7 @@ const searchTermDebounced = refDebounced(searchTerm, 500);
 </template>
 ```
 
-Here we're using [refDebounced](https://vueuse.org/shared/refDebounced/) from VueUse to debounce execution of a ref value by 500 milliseconds. This means `searchTermDebounced.value` will sync to `searchTerm` _only after_ 500 milliseconds has passed after the last update (in our case keystroke). If user keeps typing debounce timeout will be reset.
+Here we're using [refDebounced](https://vueuse.org/shared/refDebounced/) from VueUse to debounce execution of a ref value by 500 milliseconds. It means `searchTermDebounced.value` will sync to `searchTerm` _only after_ 500 milliseconds has passed after the last update (in our case keystroke). If user keeps typing debounce timeout will be reset.
 
 Next let's update `useQuery` to use debounced ref instead.
 
@@ -119,9 +124,11 @@ const { data } = useQuery({
 });
 ```
 
-From now on Query "watches" debounced ref value for changes in `queryKey`. It won't execute `queryFn` because update of `queryKey` is also debounced now.
+Now `queryKey` value itself is debounced and Query will detect changes only after debounce timeout has completed. It means it won't execute `queryFn` per each keystroke anymore. But when debounce timeout completes `queryFn` will use debounced `searchTermDebounced` value. Exactly what we need!
 
-I found this solution very effective. It decouples data fetching from UI implementation and `searchTerm` value binding. It allows to tweak debouncing behavior while keeping actual data fetching implementation clean.
+## Final result
+
+I found this solution to query debouncing very effective and elegant. It clearly decouples data fetching from UI concerns. It allows to freely tweak debouncing behavior while keeping actual data fetching implementation clean.
 
 Complete source code for debounced search implementation:
 ```vue

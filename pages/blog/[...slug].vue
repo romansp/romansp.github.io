@@ -22,7 +22,7 @@ defineOgImageComponent("NuxtSeo");
             <time :datetime="doc.date">{{ format(doc.date, "PPP") }}</time>
           </p>
           <ContentRenderer :value="doc" />
-          <a :href="`https://github.com/romansp/romansp.github.io/blob/main/content${doc._path}/index.md`">Suggest edit</a>
+          <a :href="`https://github.com/romansp/romansp.github.io/blob/main/content${doc._path}/index.md`">Suggest edit to this page</a>
         </article>
       </template>
       <template #not-found>

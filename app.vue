@@ -1,13 +1,13 @@
 <script setup lang="ts">
 useHead({
   htmlAttrs: {
-    lang: 'en',
-    class: 'dark:bg-gray-900',
+    lang: "en",
+    class: "dark:bg-gray-900",
   },
-  link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
-})
+  link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
+});
 
-defineOgImageComponent('NuxtSeo')
+defineOgImageComponent("NuxtSeo");
 </script>
 
 <template>

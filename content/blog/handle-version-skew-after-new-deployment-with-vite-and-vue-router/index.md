@@ -19,9 +19,9 @@ Vue Router supports this via dynamic imports out of the box:
 const router = createRouter({
   // ...
   routes: [
-    { path: '/users/:id', component: () => import('./views/UserDetails.vue') },
+    { path: "/users/:id", component: () => import("./views/UserDetails.vue") },
   ],
-})
+});
 ```
 
 When using Vite bundler it will automatically code split `UserDetails.vue` into a separate bundle chunk. Also Vite by default Vite appends hash value to the chunk filename to help with client-side cache invalidation.
@@ -37,9 +37,9 @@ We would like to handle such chunk loading errors. For example we could do a har
 Vite team [took care of this issue](https://vite.dev/guide/build.html#load-error-handling) and its runtime will trigger `vite:preloadError` event on `window` when Vite fails to load dynamic imports. `event.payload` will contain the original import error as well. If you call `event.preventDefault()`, the error will be considered handled and will not be rethrown.
 
 ```ts
-window.addEventListener('vite:preloadError', (event) => {
+window.addEventListener("vite:preloadError", event => {
   // handle preload failure
-})
+});
 ```
 
 Pull request for adding `vite:preloadError` from Daniel Roe in Vite repository [#12084](https://github.com/vitejs/vite/pull/12084). Thanks Daniel 🎉!
@@ -63,7 +63,7 @@ router.onError((error, to) => {
   if (chunkErrors.has(error)) {
     // we just saw this error in `vite:preloadError`, let's handle it
   }
-})
+});
 ```
 
 So by now it's clear: currently running route navigation caused chunk preload error. We also have `to` object from Vue Router which tells us which route client is trying to navigate to. We can use this information to reload our app at target path and hopefully will receive correct chunk. App reload function at path could look like this:
@@ -75,7 +75,8 @@ function reloadAppAtPath(to: RouteLocation) {
   const path = joinURL(import.meta.env.BASE_URL, to.fullPath);
   if (globalThis.location.pathname !== path) {
     globalThis.location.href = path;
-  } else {
+  }
+  else {
     globalThis.location.reload();
   }
 }
@@ -101,7 +102,8 @@ export function useChunkPreloadErrorHandling() {
     const path = joinURL(import.meta.env.BASE_URL, to.fullPath);
     if (globalThis.location.pathname !== path) {
       globalThis.location.href = path;
-    } else {
+    }
+    else {
       globalThis.location.reload();
     }
   }
@@ -122,9 +124,9 @@ And use it in app's root component:
 
 ```vue
 <script setup lang="ts">
-import { useChunkPreloadErrorHandling } from './chunk-reload'
+import { useChunkPreloadErrorHandling } from "./chunk-reload";
 
-useChunkPreloadErrorHandling()
+useChunkPreloadErrorHandling();
 </script>
 
 <template>

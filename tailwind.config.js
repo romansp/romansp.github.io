@@ -1,4 +1,4 @@
-import typography from '@tailwindcss/typography'
+import typography from "@tailwindcss/typography";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -7,11 +7,11 @@ export default {
       typography: {
         DEFAULT: {
           css: {
-            maxWidth: '80ch',
+            maxWidth: "80ch",
           },
         },
       },
     },
   },
   plugins: [typography],
-}
+};

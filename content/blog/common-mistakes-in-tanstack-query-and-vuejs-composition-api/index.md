@@ -19,18 +19,18 @@ I see this one the most. Let's take a look at the following example: we have 2 c
 
 ```ts
 export async function fetchTodo(id: string) {
-  const response = await fetch(`https://api.example/todos/${id}`)
-  return response.json()
+  const response = await fetch(`https://api.example/todos/${id}`);
+  return response.json();
 }
 ```
 
 ```vue
 // Todos.vue
 <script setup lang='ts'>
-import { ref } from 'vue'
-import { todos } from './todos'
+import { ref } from "vue";
+import { todos } from "./todos";
 
-const selectedTodo = ref()
+const selectedTodo = ref();
 </script>
 
 <template>
@@ -46,18 +46,19 @@ const selectedTodo = ref()
 ```vue
 // TodosDetails.vue
 <script setup lang='ts'>
-import { useQuery } from "@tanstack/vue-query"
-import { fetchTodo } from './todo'
+import { useQuery } from "@tanstack/vue-query";
+import { fetchTodo } from "./todo";
 
 const props = defineProps<{
-  id: string
+  id: string;
 }>();
 
 const todosQuery = useQuery({
-  queryKey: ['todos', props.id],
+  queryKey: ["todos", props.id],
   queryFn: () => fetchTodo(props.id),
-})
+});
 </script>
+
 <template>
   <div>Current todo: {{ id }}</div>
   <div>{{ todosQuery.data }}</div>
@@ -71,8 +72,8 @@ At this point you may think, okay let's manually watch `id` prop change and then
 ```ts
 // Trust me there's a better way!
 watch(() => props.id, () => {
-  todosQueries.refetch()
-})
+  todosQueries.refetch();
+});
 ```
 
 You add a `watch` with refetch and try again. It seems to do the job just fine. You see new requests are going through, `id` is updating and details are updating too.
@@ -90,15 +91,15 @@ Before revealing a solution to this issue let's take a step back and talk about 
 You may already know that object received by `defineProps` in Vue component uses `reactive()` proxy internally. It means that assignment of reactive property to another variable will disconnect reactivity.
 
 ```ts
-const state = reactive({ count: 0 })
+const state = reactive({ count: 0 });
 
 // 'count' is disconnected from 'state.count'
-let count = state.count
+let count = state.count;
 // does not affect original state
-count++
+count++;
 
-console.log(count) // 1
-console.log(state.count) // 0
+console.log(count); // 1
+console.log(state.count); // 0
 ```
 
 This limitation of `reactive` is [discussed in Vue.js documentation](https://vuejs.org/guide/essentials/reactivity-fundamentals.html#limitations-of-reactive) but it's really easy to underestimate how important this concept is to understanding Composable API better.
@@ -114,13 +115,13 @@ How can we make `useQuery` to detect changes to `queryKey`? Well, the good news 
 Let's do exactly that. Let's wrap `props.id` into Vue's or `toRef` to retain reactivity.
 
 ```ts
-import { toRef } from 'vue'
+import { toRef } from "vue";
 
 const todosQuery = useQuery({
   // you can also use 'computed(() => props.id)'
-  queryKey: ['todos', toRef(() => props.id)],
+  queryKey: ["todos", toRef(() => props.id)],
   queryFn: () => fetchTodo(props.id),
-})
+});
 ```
 
 Now `useQuery` understands that `queryKey` array includes a reactive value and can track its changes. When `queryKey` changes new entry will be added into Query cache. New Query cache entry will trigger `queryFn` call get the data for this particular Todo. You should see multiple cache entries (one per each Todo) in Query dev tools as well.
@@ -133,22 +134,22 @@ Another very common mistake occurs around wrapping `useQuery` in a custom compos
 
 ```ts
 // useTodo.ts
+// TodoDetails.vue
+import { useTodo } from "./useTodo";
+
 export function useTodo(id: string) {
   return useQuery({
-    queryKey: ['todos', id],
+    queryKey: ["todos", id],
     queryFn: () => fetchTodo(id),
-  })
+  });
 }
 
-// TodoDetails.vue
-import { useTodo } from './useTodo'
-
 const props = defineProps<{
-  id: string
-}>()
+  id: string;
+}>();
 
 // `id` reactivity loss
-const todo = useTodo(props.id)
+const todo = useTodo(props.id);
 ```
 
 And we're back to the same problem we saw before. This time it's reactivity loss across function boundaries. How do we retain reactivity in this case?
@@ -158,10 +159,10 @@ And we're back to the same problem we saw before. This time it's reactivity loss
 To retain prop reactivity across function boundary you can again use `toRef` function with a prop getter. You can also pass getter function directly.
 
 ```ts
-import { toRef } from 'vue'
+import { toRef } from "vue";
 
 // use getter to retain props reactivity across function boundary
-const todo = useTodo(() => props.id)
+const todo = useTodo(() => props.id);
 ```
 
 Let's also adjust `useTodo` composable to support reactive values.
@@ -181,14 +182,14 @@ To do just that Vue has [`toValue`](https://vuejs.org/api/reactivity-utilities.h
 Let's now add `toValue` to unwrap `id` and keep `fetchTodo` function intact.
 
 ```ts
-import { useQuery } from '@tanstack/vue-query'
-import { type MaybeRefOrGetter, toValue } from 'vue'
+import { useQuery } from "@tanstack/vue-query";
+import { type MaybeRefOrGetter, toValue } from "vue";
 
 export function useTodo(id: MaybeRefOrGetter<string>) {
   return useQuery({
-    queryKey: ['todos', id],
+    queryKey: ["todos", id],
     queryFn: () => fetchTodo(toValue(id)),
-  })
+  });
 }
 ```
 
@@ -201,15 +202,15 @@ You may be already familiar with [`queryOptions`](https://tanstack.com/query/lat
 ```ts
 function todoQueryOptions(id: string) {
   return queryOptions({
-    queryKey: ['todos', id],
+    queryKey: ["todos", id],
     queryFn: () => fetchTodo(id),
-  })
+  });
 }
 
 // possible usage
 useQuery(todoQueryOptions(1));
-queryClient.prefetchQuery(todoQueryOptions(2))
-queryClient.setQueryData(todoQueryOptions(3).queryKey, newTodo)
+queryClient.prefetchQuery(todoQueryOptions(2));
+queryClient.setQueryData(todoQueryOptions(3).queryKey, newTodo);
 ```
 
 Unfortunately examples in TanStack docs only give a basic usage example and don't demonstrate how to retain reactivity when working with it in Vue.
@@ -219,12 +220,12 @@ Unfortunately examples in TanStack docs only give a basic usage example and don'
 You may not know but properties of `useQuery` options parameter accept reactive values. For example you can pass `computed()` value as your `queryKey` array or `enabled`.
 
 ```ts
-const isEnabled = ref(true)
+const isEnabled = ref(true);
 
 useQuery({
   // internally watches changes to 'isEnabled'
   enabled: isEnabled
-})
+});
 ```
 
 Even better - `options` object itself can be fully `computed` and `useQuery` will watch it too.
@@ -233,8 +234,8 @@ Even better - `options` object itself can be fully `computed` and `useQuery` wil
 useQuery(computed(() => {
   return queryOptions({
     // ...
-  })
-}))
+  });
+}));
 ```
 
 ### Putting it All Together
@@ -246,9 +247,9 @@ Let's put it all together.
 ```ts
 function todoQueryOptions(id: string) {
   return queryOptions({
-    queryKey: ['todos', id],
+    queryKey: ["todos", id],
     queryFn: () => fetchTodo(id),
-  })
+  });
 }
 
 export function useTodo(id: MaybeRefOrGetter<string>) {
@@ -258,9 +259,9 @@ export function useTodo(id: MaybeRefOrGetter<string>) {
         ...todoQueryOptions(toValue(id)),
         // you can still add composable specific options, e.g. 'staleTime', 'placeholderData', etc.
         staleTime: 5000,
-      }
+      };
     }),
-  )
+  );
 }
 ```
 

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { QueryBuilderParams } from '@nuxt/content';
-import { format } from 'date-fns'
+import type { QueryBuilderParams } from "@nuxt/content";
+import { format } from "date-fns";
 
-const query: QueryBuilderParams = { path: 'blog', sort: [{ date: -1 }] }
+const query: QueryBuilderParams = { path: "blog", sort: [{ date: -1 }] };
 </script>
 
 <template>

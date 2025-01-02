@@ -3,7 +3,7 @@ title: 'Handle version skew after new deployment with Vite and Vue Router'
 date: 2024-12-01
 ---
 
-I'd like to share this simple solution I found on how to handle frontend client version skew after new Vue app deployment. I found it when exploring Nuxt's codebase. Original Nuxt's solution [can be found here](https://github.com/nuxt/nuxt/blob/2ea738854e3428f2cb03036630e6415b077fe732/packages/nuxt/src/app/plugins/chunk-reload.client.ts). Props to Nuxt team!
+I'd like to share this simple solution how to handle frontend client version skew or not found bundle after new Vue app deployment. I found it while exploring Nuxt's codebase. Original Nuxt's solution [can be found here](https://github.com/nuxt/nuxt/blob/2ea738854e3428f2cb03036630e6415b077fe732/packages/nuxt/src/app/plugins/chunk-reload.client.ts). Props to Nuxt team!
 
 This solution isn't limited only to Vue apps and can be used in any App which uses Vite as its bundler. Though in this article I will focus on solving this with Vue and Vue Router.
 
@@ -11,9 +11,9 @@ This solution isn't limited only to Vue apps and can be used in any App which us
 
 Frontend version skew is an issue which happens after a new deployment occurs while current clients still have old website loaded. They might keep the browser tab open for days or even weeks.
 
-When building Vue app JavaScript bundle can become quite large and affect page loading time. (https://router.vuejs.org/guide/advanced/lazy-loading.html#Lazy-Loading-Routes) is to perform bundle split into separate chunks per each route, and only load that chunk when route is actually visited.
+When building Vue app JavaScript bundle can become quite large and affect page loading time. Very often [route lazy loading](https://router.vuejs.org/guide/advanced/lazy-loading.html#Lazy-Loading-Routes) is applied to perform bundle split into separate chunks per each route. And that chunk loading will be delayed up until when route is actually visited. Browsers may decide to preload these chunks beforehand for example via `modulepreload` hints but we're not going to touch this topic.
 
-Vue Router supports this via dynamic imports out of the box:
+Vue Router supports lazy loading routes via dynamic imports out of the box:
 
 ```ts
 const router = createRouter({
@@ -28,7 +28,7 @@ When using Vite bundler it will automatically code split `UserDetails.vue` into 
 
 In our router config example `UserDetails` bundle chunk file name may look like, `UserDetails-BZBpiADS.js`. This hash is computed by hashing file contents, which means it will change if original file contents change. So if content has indeed changed, previously named `UserDetails-BZBpiADS.js` may become `UserDetails-1hmwlKRw.js`.
 
-When a new deployment occurs, the hosting service may delete the assets from previous deployments. As a result, a user who visited your site before the new deployment might encounter an import error. This error happens because the assets running on that user's device are outdated and it tries to import the corresponding old chunk, which is deleted.
+When a new deployment occurs, the hosting service may delete the assets from previous deployments. As a result, a user who visited your site before the new deployment might encounter an import error. This error happens because the assets running on that user's device are outdated and it tries to import the corresponding old chunk, which is deleted. And thus HTTP request to fetch this missing chunk results in 404 Not Found error.
 
 We would like to handle such chunk loading errors. For example we could do a hard app reload at the route where users tries to navigate to. This will reload main JS bundle and get new URLs to all other asynchronously loaded chunks.
 

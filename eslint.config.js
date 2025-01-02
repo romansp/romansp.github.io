@@ -11,4 +11,13 @@ export default antfu({
   typescript: {
     tsconfigPath: "tsconfig.json",
   },
+  vue: {
+    overrides: {
+      "vue/html-self-closing": ["error", {
+        html: {
+          void: "any",
+        },
+      }],
+    },
+  },
 });

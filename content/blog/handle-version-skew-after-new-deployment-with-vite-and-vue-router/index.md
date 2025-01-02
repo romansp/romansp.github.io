@@ -11,7 +11,7 @@ This solution isn't limited only to Vue apps and can be used in any App which us
 
 Frontend version skew is an issue which happens after a new deployment occurs while current clients still have old website loaded. They might keep the browser tab open for days or even weeks.
 
-When building Vue app JavaScript bundle can become quite large and affect page loading time. Very often [route lazy loading](https://router.vuejs.org/guide/advanced/lazy-loading.html#Lazy-Loading-Routes) is applied to perform bundle split into separate chunks per each route. And that chunk loading will be delayed up until when route is actually visited. Browsers may decide to preload these chunks beforehand for example via `modulepreload` hints but we're not going to touch this topic.
+When building Vue app JavaScript bundle can become quite large and affect page loading time. Very often [route lazy loading](https://router.vuejs.org/guide/advanced/lazy-loading.html#Lazy-Loading-Routes) is applied to perform bundle split into separate chunks per each route to reduce initial startup time. With that strategy applied chunk loading will be delayed up until when route is actually visited. Browsers may decide to preload these chunks beforehand for example via `modulepreload` hints but we're not going to touch this topic.
 
 Vue Router supports lazy loading routes via dynamic imports out of the box:
 

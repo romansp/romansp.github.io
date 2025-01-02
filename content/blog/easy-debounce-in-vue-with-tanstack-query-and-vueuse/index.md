@@ -1,7 +1,6 @@
 ---
 title: 'Easy Debounce in Vue with TanStack Query and VueUse'
 date: 2025-01-02
-draft: true
 ---
 
 Today I would like to share really neat and efficient solution how to create debounced search component in Vue.js with TanStack Query and a little help from VueUse library. Let's start from scratch with a very basic implementation and keep on adding features.

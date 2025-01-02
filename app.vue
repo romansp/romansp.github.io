@@ -41,7 +41,7 @@ defineOgImageComponent("NuxtSeo");
         </div>
       </nav>
     </header>
-    <div class="px-4 py-4 max-w-4xl mx-auto sm:px-6 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-6xl flex justify-center ">
+    <div class="px-4 py-4 max-w-6xl mx-auto sm:px-6 lg:py-16 lg:px-8 flex justify-center ">
       <NuxtPage class="min-w-0" />
     </div>
   </div>

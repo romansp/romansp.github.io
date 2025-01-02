@@ -45,7 +45,7 @@ const { data } = useQuery({
 
 Our `search` function call inside `queryFn` uses `searchTerm` value which means it must be added to `queryKey` option.
 
-It's very important to understand we ensure reactivity of `searchTerm` inside `useQuery`. To do that, pass ref-like entries into `queryKey` as-is. TanStack will automatically unwrap and setup a watcher for ref-like entries in `queryKey` array. Also `queryKey` itself can be declared as `ref` or `computed`.
+Key point here is to avoid reactivity loss of `searchTerm` inside `useQuery`. This is crucial to render data correctly. To achieve that pass ref-like entries into `queryKey` as-is. TanStack will automatically unwrap and setup a watcher for ref-like entries in `queryKey` array. Also `queryKey` itself can be declared as `ref` or `computed`.
 
 ```ts
 import { computed } from "vue";

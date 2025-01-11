@@ -3,6 +3,10 @@ import type { QueryBuilderParams } from "@nuxt/content";
 import { format } from "date-fns";
 
 const query: QueryBuilderParams = { path: "blog", sort: [{ date: -1 }] };
+
+useHead({
+  title: "Blog",
+});
 </script>
 
 <template>

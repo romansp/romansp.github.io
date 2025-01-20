@@ -7,7 +7,7 @@ export default defineContentConfig({
       type: "page",
       schema: z.object({
         date: z.string(),
-        updatedAt: z.string(),
+        updatedAt: z.string().optional(),
       }),
     }),
     content: defineCollection({

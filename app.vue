@@ -2,7 +2,7 @@
 useHead({
   htmlAttrs: {
     lang: "en",
-    class: "dark:bg-gray-900",
+    class: "dark dark:bg-gray-900",
   },
   link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
 });

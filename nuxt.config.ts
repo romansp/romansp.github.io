@@ -19,16 +19,20 @@ export default defineNuxtConfig({
   },
 
   content: {
-    highlight: {
-      theme: {
-        default: "github-dark-dimmed",
-        dark: "github-dark-dimmed",
-        light: "github-light",
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            default: "github-dark-dimmed",
+            dark: "github-dark-dimmed",
+            light: "github-light",
+          },
+        },
       },
     },
   },
 
-  compatibilityDate: "2024-11-28",
+  compatibilityDate: "2025-01-20",
 
   experimental: {
     defaults: {

@@ -3,14 +3,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
     "@nuxt/content",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/mdc",
     "@nuxt/image",
     "nuxt-og-image",
-    "@nuxtjs/sitemap",
-    "@nuxtjs/robots",
-    "nuxt-seo-utils",
   ],
 
   site: {

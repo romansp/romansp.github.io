@@ -39,6 +39,9 @@ importers:
       '@antfu/eslint-config':
         specifier: ^3.14.0
         version: 3.14.0(@typescript-eslint/utils@8.19.1(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)
+      '@nuxtjs/color-mode':
+        specifier: 3.5.2
+        version: 3.5.2(magicast@0.3.5)(rollup@4.27.4)
       '@nuxtjs/robots':
         specifier: 5.2.2
         version: 5.2.2(magicast@0.3.5)(rollup@4.27.4)(vite@6.0.7(@types/node@22.10.7)(jiti@2.4.2)(sass@1.77.4)(terser@5.31.1)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
@@ -855,6 +858,9 @@ packages:
     engines: {node: ^18.12.0 || ^20.9.0 || >=22.0.0}
     peerDependencies:
       vue: ^3.3.4
+
+  '@nuxtjs/color-mode@3.5.2':
+    resolution: {integrity: sha512-cC6RfgZh3guHBMLLjrBB2Uti5eUoGM9KyauOaYS9ETmxNWBMTvpgjvSiSJp1OFljIXPIqVTJ3xtJpSNZiO3ZaA==}
 
   '@nuxtjs/mdc@0.13.1':
     resolution: {integrity: sha512-4nywK8db32Qk5iGCtJA7ahT6Mns/47VTdjOLnjPtFlTdLegOtIlXTQ5OFsVkK+JQ9R8pxiNpv8FN7LzraqOjaw==}
@@ -4113,9 +4119,6 @@ packages:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
     engines: {node: '>= 6'}
 
-  pkg-types@1.3.0:
-    resolution: {integrity: sha512-kS7yWjVFCkIw9hqdJBoMxDdzEngmkr5FXeWZZfQ6GoYacjVnsW6l2CcYW/0ThD0vF4LPJgVYnrg4d0uuhwYQbg==}
-
   pkg-types@1.3.1:
     resolution: {integrity: sha512-/Jm5M4RvtBFVkKWRu2BLUTNP8/M2a+UwuAX+ae4770q1qVGtfjG+WTCupoZixokjmHiry8uI+dlY8KXYV5HVVQ==}
 
@@ -6660,6 +6663,17 @@ snapshots:
       - vti
       - vue-tsc
       - yaml
+
+  '@nuxtjs/color-mode@3.5.2(magicast@0.3.5)(rollup@4.27.4)':
+    dependencies:
+      '@nuxt/kit': 3.15.2(magicast@0.3.5)(rollup@4.27.4)
+      pathe: 1.1.2
+      pkg-types: 1.3.1
+      semver: 7.6.3
+    transitivePeerDependencies:
+      - magicast
+      - rollup
+      - supports-color
 
   '@nuxtjs/mdc@0.13.1(magicast@0.3.5)(rollup@4.27.4)':
     dependencies:
@@ -10779,12 +10793,6 @@ snapshots:
   pify@2.3.0: {}
 
   pirates@4.0.6: {}
-
-  pkg-types@1.3.0:
-    dependencies:
-      confbox: 0.1.8
-      mlly: 1.7.4
-      pathe: 1.1.2
 
   pkg-types@1.3.1:
     dependencies:

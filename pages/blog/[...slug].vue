@@ -11,6 +11,23 @@ function toDate(date: string | undefined) {
   return new Date(date).toISOString();
 }
 
+const pageTitle = computed(() => {
+  const title = page.value?.title;
+  if (!title) {
+    return "Raman Paulau";
+  }
+
+  if (title !== "Raman Paulau") {
+    return `${title} - Raman Paulau`;
+  }
+
+  return title;
+});
+
+useHead({
+  title: pageTitle.value,
+});
+
 useSeoMeta({
   twitterTitle: computed(() => page.value?.title),
   twitterDescription: computed(() => page.value?.description),

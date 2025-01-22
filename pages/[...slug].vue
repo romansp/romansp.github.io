@@ -3,6 +3,23 @@ const route = useRoute();
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection("content").path(route.path).first();
 });
+
+const pageTitle = computed(() => {
+  const title = page.value?.title;
+  if (!title) {
+    return "Raman Paulau";
+  }
+
+  if (title !== "Raman Paulau") {
+    return `${title} - Raman Paulau`;
+  }
+
+  return title;
+});
+
+useHead({
+  title: pageTitle.value,
+});
 </script>
 
 <template>

@@ -2,7 +2,7 @@
 import { format } from "date-fns";
 
 useHead({
-  title: "Blog",
+  title: `Blog - Raman Paulau`,
 });
 
 const route = useRoute();

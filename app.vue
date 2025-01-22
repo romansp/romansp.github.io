@@ -7,6 +7,10 @@ useHead({
   link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
 });
 
+useHead({
+  title: "Raman Paulau",
+});
+
 defineOgImageComponent("NuxtSeo");
 </script>
 

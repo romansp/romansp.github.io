@@ -28,7 +28,7 @@
     "@nuxtjs/sitemap": "7.2.5",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/vue-query": "^5.66.4",
-    "@vueuse/core": "^12.6.1",
+    "@vueuse/core": "^12.7.0",
     "axios": "^1.7.9",
     "eslint": "^9.20.1",
     "nuxt": "3.15.4"

@@ -27,8 +27,8 @@ importers:
         specifier: 4.1.3
         version: 4.1.3(magicast@0.3.5)(vite@6.0.11(@types/node@22.13.4)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
       nuxt-seo-utils:
-        specifier: ^6.0.9
-        version: 6.0.9(magicast@0.3.5)(rollup@4.32.1)(vue@3.5.13(typescript@5.7.3))
+        specifier: ^6.0.11
+        version: 6.0.11(magicast@0.3.5)(rollup@4.32.1)(vue@3.5.13(typescript@5.7.3))
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.7.3)
@@ -3750,8 +3750,8 @@ packages:
     resolution: {integrity: sha512-fvV7ecyYVSWQ5dcwuO4kR2naelYHsky7YRbzs8gcu2w7RpVA6aWqfvW+MqWY5Kdv9n1iyFO4Ajt8ftTZkHFtgQ==}
     engines: {node: '>=18.0.0'}
 
-  nuxt-seo-utils@6.0.9:
-    resolution: {integrity: sha512-X1Svs3exV5x5eP3tqCX9er57TcAnncAnp4GqpdPwWsSzhmaGbmQHXPK9L9BwBMsciTNUqDREg/Oh/GjeKR/K0w==}
+  nuxt-seo-utils@6.0.11:
+    resolution: {integrity: sha512-+29e2zZXH1atpRgrwvEDncJ98U51bvoKZ1vXGMBgwmkmZMghqQnOyd/QPxm7hHniz3783/+RQi/P/GZ9/Avhnw==}
 
   nuxt-site-config-kit@3.0.6:
     resolution: {integrity: sha512-QBOFzAIo+D02avFQQ7gNlRyA372/PQlgW2IjL2nttvjfHapqYbvP6tIP55soL+1+D8YvF/bGZgS+vJtfQhroUg==}
@@ -3759,11 +3759,17 @@ packages:
   nuxt-site-config-kit@3.0.7:
     resolution: {integrity: sha512-uxouwnPRak6/6XAEk6dYUiFVM9Vq5mUpyd3ooCwXqT0YYrhM9X6KSDHETsnFa0u+yXKTk/pzzO8fZc0DRBNaSA==}
 
+  nuxt-site-config-kit@3.1.0:
+    resolution: {integrity: sha512-DlzK1koGv2tcWFxhi7ly/ILDz9tIQ62l+iWYCx1skvtRkKatzFFf4JuJlLxHV3tUe06bAK1K1j1uEYc26a1+7A==}
+
   nuxt-site-config@3.0.6:
     resolution: {integrity: sha512-Mkyen81br21/nA2sxlLCOtJZ2L8sGL+YzxHlsVhLhEnC355CP2SwKVtYqJNJ4aYFbxeusqZXJFiD4KbveHhk0w==}
 
   nuxt-site-config@3.0.7:
     resolution: {integrity: sha512-pMKpNUsOdaYUQDNGf0t387mVv0UOFV7BEzR+TxPA96ohO7g3n/AByDLlplbORY9AydliJf0fg3vba9VgX+2WWg==}
+
+  nuxt-site-config@3.1.0:
+    resolution: {integrity: sha512-p/MZ2MvAq12d89V9DCmi8iLrC2Ca7oTbQSVUqGy/Ybqm1ob08BOhKj5p/rbUZKqnbQ9YL0q3gr1Bh08VWHZb6g==}
 
   nuxt@3.15.4:
     resolution: {integrity: sha512-hSbZO4mR0uAMJtZPNTnCfiAtgleoOu28gvJcBNU7KQHgWnNXPjlWgwMczko2O4Tmnv9zIe/CQged+2HsPwl2ZA==}
@@ -4589,6 +4595,11 @@ packages:
 
   site-config-stack@3.0.7:
     resolution: {integrity: sha512-JH8gI3t4TiA00Dj8e2qRdJOfPY948kzJFcW2QCmrWU19xX1zBtD7bMLGefB5sQgXh8MSNVk9hJX2NWIPMHDtXA==}
+    peerDependencies:
+      vue: ^3
+
+  site-config-stack@3.1.0:
+    resolution: {integrity: sha512-Y7Abf+tPz9XmEGzXNHwIZPSipTeDwneJkyBWOqjzj/gxMRETL9wnRhCWvHBJxxmPfPewhUkrJHi9wK9TeJFRHQ==}
     peerDependencies:
       vue: ^3
 
@@ -9857,7 +9868,7 @@ snapshots:
   mlly@1.7.4:
     dependencies:
       acorn: 8.14.0
-      pathe: 2.0.2
+      pathe: 2.0.3
       pkg-types: 1.3.1
       ufo: 1.5.4
 
@@ -10110,7 +10121,7 @@ snapshots:
       - vite
       - vue
 
-  nuxt-seo-utils@6.0.9(magicast@0.3.5)(rollup@4.32.1)(vue@3.5.13(typescript@5.7.3)):
+  nuxt-seo-utils@6.0.11(magicast@0.3.5)(rollup@4.32.1)(vue@3.5.13(typescript@5.7.3)):
     dependencies:
       '@nuxt/kit': 3.15.4(magicast@0.3.5)
       '@unhead/addons': 1.11.19(rollup@4.32.1)
@@ -10119,7 +10130,7 @@ snapshots:
       fast-glob: 3.3.3
       image-size: 1.2.0
       mlly: 1.7.4
-      nuxt-site-config: 3.0.7(magicast@0.3.5)(vue@3.5.13(typescript@5.7.3))
+      nuxt-site-config: 3.1.0(magicast@0.3.5)(vue@3.5.13(typescript@5.7.3))
       pathe: 2.0.3
       scule: 1.3.0
       ufo: 1.5.4
@@ -10154,6 +10165,18 @@ snapshots:
       - supports-color
       - vue
 
+  nuxt-site-config-kit@3.1.0(magicast@0.3.5)(vue@3.5.13(typescript@5.7.3)):
+    dependencies:
+      '@nuxt/kit': 3.15.4(magicast@0.3.5)
+      pkg-types: 1.3.1
+      site-config-stack: 3.1.0(vue@3.5.13(typescript@5.7.3))
+      std-env: 3.8.0
+      ufo: 1.5.4
+    transitivePeerDependencies:
+      - magicast
+      - supports-color
+      - vue
+
   nuxt-site-config@3.0.6(magicast@0.3.5)(vite@6.0.11(@types/node@22.13.4)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3)):
     dependencies:
       '@nuxt/devtools-kit': 1.7.0(magicast@0.3.5)(vite@6.0.11(@types/node@22.13.4)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0))
@@ -10179,6 +10202,20 @@ snapshots:
       pkg-types: 1.3.1
       sirv: 3.0.1
       site-config-stack: 3.0.7(vue@3.5.13(typescript@5.7.3))
+      ufo: 1.5.4
+    transitivePeerDependencies:
+      - magicast
+      - supports-color
+      - vue
+
+  nuxt-site-config@3.1.0(magicast@0.3.5)(vue@3.5.13(typescript@5.7.3)):
+    dependencies:
+      '@nuxt/kit': 3.15.4(magicast@0.3.5)
+      nuxt-site-config-kit: 3.1.0(magicast@0.3.5)(vue@3.5.13(typescript@5.7.3))
+      pathe: 2.0.3
+      pkg-types: 1.3.1
+      sirv: 3.0.1
+      site-config-stack: 3.1.0(vue@3.5.13(typescript@5.7.3))
       ufo: 1.5.4
     transitivePeerDependencies:
       - magicast
@@ -10320,7 +10357,7 @@ snapshots:
     dependencies:
       citty: 0.1.6
       consola: 3.4.0
-      pathe: 2.0.3
+      pathe: 2.0.2
       pkg-types: 1.3.1
       tinyexec: 0.3.2
       ufo: 1.5.4
@@ -11264,6 +11301,11 @@ snapshots:
       vue: 3.5.13(typescript@5.7.3)
 
   site-config-stack@3.0.7(vue@3.5.13(typescript@5.7.3)):
+    dependencies:
+      ufo: 1.5.4
+      vue: 3.5.13(typescript@5.7.3)
+
+  site-config-stack@3.1.0(vue@3.5.13(typescript@5.7.3)):
     dependencies:
       ufo: 1.5.4
       vue: 3.5.13(typescript@5.7.3)

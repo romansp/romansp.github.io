@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
@@ -6,11 +8,15 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
     "@nuxt/content",
-    "@nuxtjs/tailwindcss",
     "@nuxtjs/mdc",
     "@nuxt/image",
     "nuxt-og-image",
   ],
+
+  css: ["~/style.css"],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 
   site: {
     url: "https://paulau.dev",

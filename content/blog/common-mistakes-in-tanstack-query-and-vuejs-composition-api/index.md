@@ -11,6 +11,9 @@ Most of the time it comes down to **reactivity loss** and usually can be fixed w
 
 Let's take a look at few examples, understand _why_ reactivity can be lost, and explore how to avoid making this mistake.
 
+### Note: March 2025 update
+Since this article was written a [dedicated section](https://tanstack.com/query/latest/docs/framework/vue/reactivity) was added to TanStack documentation on reactivity in Vue.js. It covers similar topics as this article and provides additional explanation on how to retain reactivity in Vue components.
+
 ## Losing `defineProps` Reactivity
 
 I see this one the most. Let's take a look at the following example: we have 2 components, `TodoList` and `TodoDetails`.

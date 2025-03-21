@@ -14,7 +14,7 @@
     "@nuxt/content": "^3.3.0",
     "@nuxt/image": "^1.10.0",
     "@nuxtjs/mdc": "0.16.0",
-    "@tailwindcss/vite": "^4.0.0",
+    "@tailwindcss/vite": "^4.0.15",
     "date-fns": "^4.1.0",
     "nuxt-og-image": "5.0.5",
     "nuxt-seo-utils": "^7.0.4",

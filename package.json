@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxt/content": "^3.3.0",
     "@nuxt/image": "^1.10.0",
-    "@nuxtjs/mdc": "0.16.0",
+    "@nuxtjs/mdc": "0.16.1",
     "@tailwindcss/vite": "^4.0.0",
     "date-fns": "^4.1.0",
     "nuxt-og-image": "5.0.5",

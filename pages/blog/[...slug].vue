@@ -48,10 +48,20 @@ defineOgImageComponent("NuxtSeo");
         {{ page.title }}
       </h1>
       <p class="opacity-70 text-xs">
-        <time :datetime="page.date">{{ format(page.date, "PPP") }}</time>
+        <NuxtTime
+          :datetime="page.date"
+          year="numeric"
+          month="long"
+          day="numeric"
+        />
       </p>
       <p v-if="page.updatedAt" class="opacity-70 text-xs">
-        (updated: <time :datetime="page.updatedAt">{{ format(page.updatedAt, "PPP") }}</time>)
+        (updated: <NuxtTime
+          :datetime="page.updatedAt"
+          year="numeric"
+          month="long"
+          day="numeric"
+        />)
       </p>
       <ContentRenderer v-if="page" :value="page" />
       <a :href="`https://github.com/romansp/romansp.github.io/blob/main/content${page.path}/index.md`">Suggest edit to this page</a>

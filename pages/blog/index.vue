@@ -22,7 +22,12 @@ const { data: articles } = await useAsyncData(route.path, () => {
           <h2 class="text-xl underline">
             {{ article.title }}
           </h2>
-          <time class="text-xs opacity-70" :datetime="article.date">{{ format(article.date, "PPP") }}</time>
+          <NuxtTime
+            class="text-xs opacity-70"
+            :datetime="article.date" year="numeric"
+            month="long"
+            day="numeric"
+          />
         </NuxtLink>
       </li>
     </ul>

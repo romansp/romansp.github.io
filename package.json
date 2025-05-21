@@ -2,7 +2,7 @@
   "name": "nuxt-app",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321",
+  "packageManager": "pnpm@10.11.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -11,27 +11,27 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/content": "^3.3.0",
+    "@nuxt/content": "^3.5.1",
     "@nuxt/image": "^1.10.0",
-    "@nuxtjs/mdc": "0.16.0",
-    "@tailwindcss/vite": "^4.0.0",
+    "@nuxtjs/mdc": "0.17.0",
+    "@tailwindcss/vite": "^4.1.7",
     "date-fns": "^4.1.0",
-    "nuxt-og-image": "5.0.5",
-    "nuxt-seo-utils": "^7.0.4",
-    "tailwindcss": "^4.0.0",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "nuxt-og-image": "5.1.4",
+    "nuxt-seo-utils": "^7.0.12",
+    "tailwindcss": "^4.1.7",
+    "vue": "^3.5.14",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.10.1",
+    "@antfu/eslint-config": "^4.13.2",
     "@nuxtjs/color-mode": "3.5.2",
-    "@nuxtjs/robots": "5.2.8",
-    "@nuxtjs/sitemap": "7.2.9",
+    "@nuxtjs/robots": "5.2.10",
+    "@nuxtjs/sitemap": "7.3.0",
     "@tailwindcss/typography": "^0.5.16",
-    "@tanstack/vue-query": "^5.69.0",
-    "@vueuse/core": "^13.0.0",
-    "axios": "^1.8.4",
-    "eslint": "^9.22.0",
-    "nuxt": "3.16.1"
+    "@tanstack/vue-query": "^5.76.0",
+    "@vueuse/core": "^13.2.0",
+    "axios": "^1.9.0",
+    "eslint": "^9.27.0",
+    "nuxt": "3.17.4"
   }
 }

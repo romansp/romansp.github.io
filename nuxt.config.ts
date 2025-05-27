@@ -49,13 +49,4 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  hooks: {
-    // Ensure page trailing slash
-    "pages:extend": function (pages) {
-      for (const page of pages) {
-        page.path = page.path.endsWith("/") ? page.path : `${page.path}/`;
-      }
-    },
-  },
 });

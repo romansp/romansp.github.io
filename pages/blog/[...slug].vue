@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { format } from "date-fns";
-
 const route = useRoute();
 const { data: page } = await useAsyncData(route.fullPath, () => queryCollection("blog").path(route.path).first());
 

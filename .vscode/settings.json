@@ -69,13 +69,7 @@
   "search.exclude": {
     "**/.yarn": true
   },
-  "stylelint.validate": [
-    "css",
-    "less",
-    "postcss",
-    "scss",
-    "vue"
-  ],
+  "css.customData": [".vscode/tailwind.json"],
   "tailwindCSS.experimental.classRegex": [
     [
       "cva\\(([^)]*)\\)",

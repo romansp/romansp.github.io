@@ -13,9 +13,7 @@ useHead({
   link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
 });
 
-defineOgImageComponent("NuxtSeo", {
-  colorMode: "dark",
-});
+defineOgImageComponent("SimpleBlog");
 </script>
 
 <template>

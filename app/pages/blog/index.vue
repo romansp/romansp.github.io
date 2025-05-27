@@ -1,12 +1,10 @@
 <script setup lang="ts">
 useHead({
-  title: `Blog - Raman Paulau`,
+  title: "Blog",
 });
 
 const route = useRoute();
-const { data: articles } = await useAsyncData(route.path, () => {
-  return queryCollection("blog").order("date", "DESC").all();
-});
+const { data: articles } = await useAsyncData(route.path, () => queryCollection("blog").order("date", "DESC").all());
 </script>
 
 <template>

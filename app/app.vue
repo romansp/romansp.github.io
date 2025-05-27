@@ -1,5 +1,11 @@
 <script setup lang="ts">
 useHead({
+  titleTemplate: titleChunk => {
+    if (titleChunk === "Raman Paulau") {
+      return titleChunk;
+    }
+    return titleChunk ? `${titleChunk} - Raman Paulau` : "Raman Paulau";
+  },
   htmlAttrs: {
     lang: "en",
     class: "dark dark:bg-gray-900",
@@ -7,11 +13,9 @@ useHead({
   link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
 });
 
-useHead({
-  title: "Raman Paulau",
+defineOgImageComponent("NuxtSeo", {
+  colorMode: "dark",
 });
-
-defineOgImageComponent("NuxtSeo");
 </script>
 
 <template>

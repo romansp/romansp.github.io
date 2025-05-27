@@ -1,24 +1,9 @@
 <script lang="ts" setup>
 const route = useRoute();
-const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection("content").path(route.path).first();
-});
-
-const pageTitle = computed(() => {
-  const title = page.value?.title;
-  if (!title) {
-    return "Raman Paulau";
-  }
-
-  if (title !== "Raman Paulau") {
-    return `${title} - Raman Paulau`;
-  }
-
-  return title;
-});
+const { data: page } = await useAsyncData(route.path, () => queryCollection("content").path(route.path).first());
 
 useHead({
-  title: pageTitle.value,
+  title: computed(() => page.value?.title),
 });
 </script>
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute();
-const { data: page } = await useAsyncData(route.fullPath, () => queryCollection("blog").path(route.path).first());
+const { data: page } = await useAsyncData(route.path, () => queryCollection("blog").path(route.path).first());
 
 function toDate(date: string | undefined) {
   if (!date) {
@@ -9,31 +9,21 @@ function toDate(date: string | undefined) {
   return new Date(date).toISOString();
 }
 
-const pageTitle = computed(() => {
-  const title = page.value?.title;
-  if (!title) {
-    return "Raman Paulau";
-  }
-
-  if (title !== "Raman Paulau") {
-    return `${title} - Raman Paulau`;
-  }
-
-  return title;
-});
-
 useHead({
-  title: pageTitle.value,
+  title: computed(() => page.value?.title),
 });
 
 useSeoMeta({
+  description: computed(() => page.value?.description),
   twitterTitle: computed(() => page.value?.title),
   twitterDescription: computed(() => page.value?.description),
   articlePublishedTime: computed(() => toDate(page.value?.date)),
   articleModifiedTime: computed(() => toDate(page.value?.updatedAt ?? page.value?.date)),
 });
 
-defineOgImageComponent("NuxtSeo");
+// defineOgImageComponent("NuxtSeo", {
+//   colorMode: "dark",
+// });
 </script>
 
 <template>

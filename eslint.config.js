@@ -7,6 +7,7 @@ export default antfu({
   },
   rules: {
     "style/arrow-parens": ["error", "as-needed"],
+    "ts/strict-boolean-expressions": "off",
   },
   typescript: {
     tsconfigPath: "tsconfig.json",

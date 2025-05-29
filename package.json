@@ -27,6 +27,6 @@
     "nuxt": "^3.17.4",
     "nuxt-og-image": "5.1.4",
     "nuxt-seo-utils": "^7.0.12",
-    "tailwindcss": "^4.1.7"
+    "tailwindcss": "^4.1.8"
   }
 }

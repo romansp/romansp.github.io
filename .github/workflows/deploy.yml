@@ -26,8 +26,8 @@ jobs:
           path: ./.output/public
   # Deployment job
   deploy:
-    env:
-      DEPLOY_SITE: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    # only run deploy job on pushes to main branch
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
     # Add a dependency to the build job
     needs: build
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
@@ -42,6 +42,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
-        if: ${{ env.DEPLOY_SITE == 'true' }}
         id: deployment
         uses: actions/deploy-pages@v4

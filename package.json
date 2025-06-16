@@ -22,7 +22,7 @@
     "@tailwindcss/vite": "^4.1.7",
     "@tanstack/vue-query": "^5.80.6",
     "@vueuse/core": "^13.3.0",
-    "axios": "^1.9.0",
+    "axios": "^1.10.0",
     "eslint": "^9.28.0",
     "nuxt": "^3.17.4",
     "nuxt-og-image": "5.1.6",

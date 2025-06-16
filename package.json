@@ -23,7 +23,7 @@
     "@tanstack/vue-query": "^5.80.6",
     "@vueuse/core": "^13.3.0",
     "axios": "^1.9.0",
-    "eslint": "^9.28.0",
+    "eslint": "^9.29.0",
     "nuxt": "^3.17.4",
     "nuxt-og-image": "5.1.6",
     "nuxt-seo-utils": "^7.0.12",

@@ -21,7 +21,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.10",
     "@tanstack/vue-query": "^5.80.7",
-    "@vueuse/core": "^13.3.0",
+    "@vueuse/core": "^13.4.0",
     "axios": "^1.10.0",
     "eslint": "^9.29.0",
     "nuxt": "^3.17.5",

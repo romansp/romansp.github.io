@@ -1,4 +1,21 @@
 import antfu from "@antfu/eslint-config";
+import tailwindcss from "eslint-plugin-better-tailwindcss";
+
+const twConfig = {
+  plugins: {
+    "better-tailwindcss": tailwindcss,
+  },
+  rules: {
+    ...tailwindcss.configs["recommended-warn"].rules,
+    "better-tailwindcss/enforce-consistent-line-wrapping": "off",
+    "better-tailwindcss/no-unregistered-classes": ["warn"],
+  },
+  settings: {
+    "better-tailwindcss": {
+      entryPoint: "app/style.css",
+    },
+  },
+};
 
 export default antfu({
   stylistic: {
@@ -21,4 +38,4 @@ export default antfu({
       }],
     },
   },
-});
+}, twConfig);

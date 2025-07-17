@@ -17,9 +17,9 @@ defineOgImageComponent("SimpleBlog");
 </script>
 
 <template>
-  <div class="antialiased text-gray-900 dark:bg-gray-900 dark:text-slate-300 min-h-screen">
+  <div class="min-h-screen text-gray-900 antialiased dark:bg-gray-900 dark:text-slate-300">
     <header>
-      <nav class="p-8 flex flex-col px-4 py-6">
+      <nav class="flex flex-col p-8 px-4 py-6">
         <div class="flex gap-4">
           <ul class="flex gap-2">
             <li>
@@ -33,7 +33,7 @@ defineOgImageComponent("SimpleBlog");
               </NuxtLink>
             </li>
           </ul>
-          <ul class="flex ml-auto gap-2">
+          <ul class="ml-auto flex gap-2">
             <li>
               <a class="underline" href="https://github.com/romansp">GitHub</a>
             </li>
@@ -47,7 +47,7 @@ defineOgImageComponent("SimpleBlog");
         </div>
       </nav>
     </header>
-    <div class="px-4 py-4 max-w-6xl mx-auto sm:px-6 lg:py-16 lg:px-8 flex justify-center ">
+    <div class="mx-auto flex max-w-6xl justify-center px-4 py-4 sm:px-6 lg:px-8 lg:py-16">
       <NuxtPage class="min-w-0" />
     </div>
   </div>

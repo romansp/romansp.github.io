@@ -29,6 +29,11 @@ export default antfu({
   typescript: {
     tsconfigPath: "tsconfig.json",
   },
+  markdown: {
+    overrides: {
+      "import/consistent-type-specifier-style": "off",
+    },
+  },
   vue: {
     overrides: {
       "vue/html-self-closing": ["error", {

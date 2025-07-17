@@ -8,11 +8,11 @@ const domain = new URL(useSiteConfig().url).host;
 </script>
 
 <template>
-  <div class="h-full w-full border-y-12 border-gray-500 bg-gray-900 text-slate-300 p-16">
-    <h1 class="text-5xl mb-4">
+  <div class="h-full w-full border-y-12 border-gray-500 bg-gray-900 p-16 text-slate-300">
+    <h1 class="mb-4 text-5xl">
       {{ title }}
     </h1>
-    <p class="text-2xl mb-4">
+    <p class="mb-4 text-2xl">
       {{ description }}
     </p>
     <p class="text-xl">

@@ -35,7 +35,7 @@ useSeoMeta({
       <h1 class="mb-0">
         {{ page.title }}
       </h1>
-      <p class="opacity-70 text-xs">
+      <p class="text-xs opacity-70">
         <NuxtTime
           :datetime="page.date"
           year="numeric"
@@ -43,7 +43,7 @@ useSeoMeta({
           day="numeric"
         />
       </p>
-      <p v-if="page.updatedAt" class="opacity-70 text-xs">
+      <p v-if="page.updatedAt" class="text-xs opacity-70">
         (updated: <NuxtTime
           :datetime="page.updatedAt"
           year="numeric"

@@ -11,7 +11,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^5.2.0",
+    "@antfu/eslint-config": "^5.2.1",
     "@nuxt/content": "^3.6.3",
     "@nuxt/image": "^1.11.0",
     "@nuxtjs/color-mode": "3.5.2",
@@ -19,8 +19,8 @@
     "@nuxtjs/robots": "5.4.0",
     "@nuxtjs/sitemap": "7.4.3",
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.1.11",
-    "@tanstack/vue-query": "^5.83.1",
+    "@tailwindcss/vite": "^4.1.12",
+    "@tanstack/vue-query": "^5.85.3",
     "@vueuse/core": "^13.6.0",
     "axios": "^1.11.0",
     "eslint": "^9.33.0",
@@ -28,6 +28,6 @@
     "nuxt": "^4.0.3",
     "nuxt-og-image": "5.1.9",
     "nuxt-seo-utils": "^7.0.14",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.12"
   }
 }

@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   site: {
     url: "https://paulau.dev",
     name: "Raman Paulau",
-    trailingSlash: true,
+    // trailingSlash: true,
   },
 
   content: {
@@ -42,11 +42,11 @@ export default defineNuxtConfig({
 
   compatibilityDate: "2025-05-27",
 
-  experimental: {
-    defaults: {
-      nuxtLink: {
-        trailingSlash: "append",
-      },
-    },
-  },
+  // experimental: {
+  //   defaults: {
+  //     nuxtLink: {
+  //       trailingSlash: "append",
+  //     },
+  //   },
+  // },
 });

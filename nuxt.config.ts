@@ -36,8 +36,8 @@ export default defineNuxtConfig({
     },
   },
 
-  routeRules: {
-    "/**": { prerender: true },
+  nitro: {
+    static: true,
   },
 
   compatibilityDate: "2025-05-27",

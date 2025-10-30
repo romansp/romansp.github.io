@@ -141,7 +141,7 @@ const searchTerm = ref("");
 const searchTermDebounced = refDebounced(searchTerm, 500);
 
 async function search(searchTerm: string) {
-  // perform server call, e.g. with 'axios'
+  // perform server call, e.g. with native fetch or with library like 'ky' or 'axios' and return data
   // implementation omitted
 }
 

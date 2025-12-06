@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     "@nuxtjs/robots",
     "@nuxt/content",
     "@nuxtjs/mdc",
-    "@nuxt/image",
     "nuxt-og-image",
   ],
 

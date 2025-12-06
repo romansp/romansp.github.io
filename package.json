@@ -8,7 +8,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck"
   },
   "dependencies": {
     "@antfu/eslint-config": "^6.4.2",
@@ -25,6 +26,8 @@
     "nuxt": "^4.2.1",
     "nuxt-og-image": "5.1.12",
     "nuxt-seo-utils": "^7.0.19",
-    "tailwindcss": "^4.1.17"
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.1.6"
   }
 }

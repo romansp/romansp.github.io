@@ -15,6 +15,10 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
 
+  typescript: {
+    typeCheck: true,
+  },
+
   site: {
     url: "https://paulau.dev",
     name: "Raman Paulau",

@@ -25,6 +25,9 @@ export default antfu({
   rules: {
     "style/arrow-parens": ["error", "as-needed"],
     "ts/strict-boolean-expressions": "off",
+    "pnpm/json-enforce-catalog": "off",
+    "pnpm/json-prefer-workspace-settings": "off",
+    "pnpm/json-valid-catalog": "off",
   },
   typescript: {
     tsconfigPath: "tsconfig.json",

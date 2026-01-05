@@ -19,7 +19,7 @@
     "@nuxtjs/sitemap": "7.5.0",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",
-    "@tanstack/vue-query": "^5.92.1",
+    "@tanstack/vue-query": "^5.92.5",
     "@vueuse/core": "^14.1.0",
     "eslint": "^9.39.2",
     "eslint-plugin-better-tailwindcss": "^3.8.0",

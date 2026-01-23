@@ -25,6 +25,10 @@ export default defineNuxtConfig({
     trailingSlash: true,
   },
 
+  ogImage: {
+    zeroRuntime: true,
+  },
+
   content: {
     build: {
       markdown: {

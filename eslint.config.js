@@ -7,7 +7,7 @@ const twConfig = {
   ],
   rules: {
     "better-tailwindcss/enforce-consistent-line-wrapping": "off",
-    "better-tailwindcss/no-unregistered-classes": ["warn"],
+    "better-tailwindcss/no-unknown-classes": ["warn"],
   },
   settings: {
     "better-tailwindcss": {

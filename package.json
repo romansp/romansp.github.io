@@ -2,7 +2,7 @@
   "name": "nuxt-app",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.26.2+sha512.0e308ff2005fc7410366f154f625f6631ab2b16b1d2e70238444dd6ae9d630a8482d92a451144debc492416896ed16f7b114a86ec68b8404b2443869e68ffda6",
+  "packageManager": "pnpm@10.28.1+sha512.7d7dbbca9e99447b7c3bf7a73286afaaf6be99251eb9498baefa7d406892f67b879adb3a1d7e687fc4ccc1a388c7175fbaae567a26ab44d1067b54fcb0d6a316",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -12,7 +12,7 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^7.0.1",
+    "@antfu/eslint-config": "^7.2.0",
     "@nuxt/content": "^3.11.0",
     "@nuxtjs/mdc": "0.20.0",
     "@nuxtjs/robots": "5.6.7",
@@ -22,12 +22,12 @@
     "@tanstack/vue-query": "^5.92.8",
     "@vueuse/core": "^14.1.0",
     "eslint": "^9.39.2",
-    "eslint-plugin-better-tailwindcss": "^3.8.0",
-    "nuxt": "^4.2.2",
+    "eslint-plugin-better-tailwindcss": "^4.0.1",
+    "nuxt": "^4.3.0",
     "nuxt-og-image": "5.1.13",
     "nuxt-seo-utils": "^7.0.19",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
-    "vue-tsc": "^3.2.2"
+    "vue-tsc": "^3.2.3"
   }
 }

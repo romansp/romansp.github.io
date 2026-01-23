@@ -1,0 +1,30 @@
+{
+  "name": "Nuxt.js Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:24",
+
+  "features": {
+    "ghcr.io/devcontainers/features/copilot-cli:1": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Vue.volar",
+        "dbaeumer.vscode-eslint",
+        "bradlc.vscode-tailwindcss",
+        "nuxtr.nuxtr-vscode"
+      ]
+    }
+  },
+
+  "postCreateCommand": "pnpm install",
+
+  "forwardPorts": [3000],
+
+  "portsAttributes": {
+    "3000": {
+      "label": "Nuxt Dev Server",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}

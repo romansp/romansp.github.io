@@ -1,5 +1,5 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
   "editor.formatOnSave": false,
@@ -80,6 +80,5 @@
       "(?:'|\"|`)([^']*)(?:'|\"|`)"
     ]
   ],
-  "eslint.runtime": "node",
-  "vue.server.hybridMode": true
+  "eslint.runtime": "node"
 }

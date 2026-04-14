@@ -17,6 +17,9 @@ export default defineNuxtConfig({
 
   typescript: {
     typeCheck: true,
+    tsConfig: {
+      include: ["../content.config.ts"],
+    },
   },
 
   site: {

@@ -13,7 +13,9 @@ useHead({
   link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
 });
 
-defineOgImageComponent("SimpleBlog");
+defineOgImage("SimpleBlog.takumi", {
+  title: "Raman Paulau",
+});
 </script>
 
 <template>

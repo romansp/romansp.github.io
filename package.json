@@ -27,7 +27,7 @@
     "nuxt-og-image": "5.1.13",
     "nuxt-seo-utils": "^7.0.19",
     "tailwindcss": "^4.2.2",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.2",
     "vue-tsc": "^3.2.6"
   }
 }

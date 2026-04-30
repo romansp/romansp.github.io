@@ -1,4 +1,6 @@
 import { defineCollection, defineContentConfig, z } from "@nuxt/content";
+import { defineSitemapSchema } from "@nuxtjs/sitemap/content";
+import { defineOgImageSchema } from "nuxt-og-image/content";
 
 export default defineContentConfig({
   collections: {
@@ -8,6 +10,8 @@ export default defineContentConfig({
       schema: z.object({
         date: z.string(),
         updatedAt: z.string().optional(),
+        ogImage: defineOgImageSchema(),
+        sitemap: defineSitemapSchema(),
       }),
     }),
     content: defineCollection({

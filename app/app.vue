@@ -13,7 +13,9 @@ useHead({
   link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
 });
 
-defineOgImageComponent("SimpleBlog");
+defineOgImage("SimpleBlog.takumi", {
+  title: "Raman Paulau",
+});
 </script>
 
 <template>
@@ -47,7 +49,7 @@ defineOgImageComponent("SimpleBlog");
         </div>
       </nav>
     </header>
-    <div class="mx-auto flex max-w-6xl justify-center px-4 py-4 sm:px-6 lg:px-8 lg:py-16">
+    <div class="mx-auto flex max-w-6xl justify-center p-4 sm:px-6 lg:px-8 lg:py-16">
       <NuxtPage class="min-w-0" />
     </div>
   </div>

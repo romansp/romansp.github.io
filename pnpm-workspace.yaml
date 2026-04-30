@@ -1,4 +1,15 @@
+shellEmulator: true
+
+trustPolicy: no-downgrade
+
+# Exclude specific packages from the trust policy while the ecosystem upgrades to new versions of these
+# Allows them to be downgraded if necessary.
+trustPolicyExclude:
+  - chokidar@4.0.3
+  - semver@6.3.1
+
 onlyBuiltDependencies:
+  - "@parcel/watcher"
   - "@tailwindcss/oxide"
   - better-sqlite3
   - esbuild

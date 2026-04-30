@@ -21,9 +21,12 @@ useSeoMeta({
   articleModifiedTime: computed(() => toDate(page.value?.updatedAt ?? page.value?.date)),
 });
 
-// defineOgImageComponent("NuxtSeo", {
-//   colorMode: "dark",
-// });
+if (page.value) {
+  defineOgImage("SimpleBlog.takumi", {
+    title: page.value.title,
+    description: page.value.description,
+  });
+}
 </script>
 
 <template>

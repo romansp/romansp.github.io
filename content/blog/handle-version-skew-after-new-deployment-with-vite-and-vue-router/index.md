@@ -1,6 +1,7 @@
 ---
 title: 'Handle version skew after new deployment with Vite and Vue Router'
 date: 2024-12-01
+description: Elegant solution for resolving stale bundle issues in single page applications after new deployment
 ---
 
 I'd like to share this simple solution how to handle frontend client version skew or not found bundle after new Vue app deployment. I found it while exploring Nuxt's codebase. Original Nuxt's solution [can be found here](https://github.com/nuxt/nuxt/blob/2ea738854e3428f2cb03036630e6415b077fe732/packages/nuxt/src/app/plugins/chunk-reload.client.ts). Props to Nuxt team!

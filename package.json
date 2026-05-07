@@ -20,15 +20,15 @@
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.4",
     "@takumi-rs/core": "^1.1.2",
-    "@tanstack/vue-query": "^5.100.7",
+    "@tanstack/vue-query": "^5.100.9",
     "@vueuse/core": "^14.3.0",
     "eslint": "^10.3.0",
     "eslint-plugin-better-tailwindcss": "^4.5.0",
     "nuxt": "^4.4.4",
-    "nuxt-og-image": "6.4.9",
+    "nuxt-og-image": "6.5.0",
     "nuxt-seo-utils": "^8.1.11",
     "tailwindcss": "^4.2.4",
     "typescript": "^6.0.3",
-    "vue-tsc": "^3.2.7"
+    "vue-tsc": "^3.2.8"
   }
 }

@@ -14,21 +14,21 @@
   "dependencies": {
     "@antfu/eslint-config": "^8.2.0",
     "@nuxt/content": "^3.13.0",
-    "@nuxtjs/mdc": "0.21.1",
+    "@nuxtjs/mdc": "0.22.0",
     "@nuxtjs/robots": "6.0.8",
     "@nuxtjs/sitemap": "8.0.15",
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.2.4",
+    "@tailwindcss/vite": "^4.3.0",
     "@takumi-rs/core": "^1.1.2",
-    "@tanstack/vue-query": "^5.100.7",
+    "@tanstack/vue-query": "^5.100.10",
     "@vueuse/core": "^14.3.0",
     "eslint": "^10.3.0",
     "eslint-plugin-better-tailwindcss": "^4.5.0",
-    "nuxt": "^4.4.4",
-    "nuxt-og-image": "6.4.9",
+    "nuxt": "^4.4.5",
+    "nuxt-og-image": "6.5.0",
     "nuxt-seo-utils": "^8.1.11",
-    "tailwindcss": "^4.2.4",
+    "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3",
-    "vue-tsc": "^3.2.7"
+    "vue-tsc": "^3.2.9"
   }
 }
